@@ -85,4 +85,4 @@ Special geometry is not a spacing token: the logo is 72px (56px on small screens
 3. Check the homepage, Events including Past meetings, PTO Team, and a detail view at desktop and mobile widths.
 4. Before production, verify text enlargement, browser zoom/reflow, keyboard order, focus, real link destinations, and screen-reader semantics.
 
-The current prototype still switches views locally. Real event URLs, browser back/forward integration, and navigation focus management are production work, not completed features of this styling update.
+The content migration adds shareable hash event URLs, browser back/forward integration, and heading focus after navigation. The site remains a static single-page application; production accessibility verification is still required. Navigation and event filters use real links, with `aria-current` indicating the selected destination.

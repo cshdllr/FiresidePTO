@@ -1,2 +1,11 @@
 html { color-scheme: light; background: #fff; }
 body { margin: 0; }
+#fireside-refined .fr-brand,
+#fireside-refined .fr-primary,
+#fireside-refined .fr-event-row { text-decoration: none; }
+#fireside-refined .fr-primary { min-height: var(--fr-control-min); }
+#fireside-refined .fr-list-heading { margin-top: 32px; }
+#fireside-refined .fr-switch [aria-current="page"] { border-bottom: 2px solid var(--fr-text); text-decoration: none; }
+#fireside-refined .fr-resource-list { list-style: none; padding: 0; margin: 16px 0; }
+#fireside-refined .fr-resource-list li { padding-block: 8px; border-bottom: 1px solid var(--fr-line); }
+#fireside-refined .fr-resource-list .fr-note { border: 0; padding: 0; }

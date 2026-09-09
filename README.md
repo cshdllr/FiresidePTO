@@ -6,7 +6,7 @@ A minimal, light-mode website concept for Fireside Elementary's PTO. Plain HTML,
 
 This is a design preview, not a replacement for the current school website. It includes a featured event, Events with a Past meetings section, event detail views, and a PTO Team directory.
 
-Before using it as the official site, confirm event dates and contacts, replace photo placeholders, complete the roster, and replace the illustrative archived meeting with actual records. Some links intentionally go to the existing Fireside PTO website. The Donate link currently opens its fundraising information page. Existing school-domain settings have not been changed.
+Public content has been imported from the existing site: meeting records, the full listed team, volunteer committees, budgets, and forms. See `content-sources.md` for coverage and unresolved source conflicts. Before using it as the official site, resolve unconfirmed event dates and contacts and replace photo placeholders. The Donate link opens the donation destination published on the existing homepage. Existing school-domain settings have not been changed.
 
 ## Run locally
 
@@ -34,8 +34,10 @@ For a project repository the URL is usually `https://OWNER.github.io/REPOSITORY/
 
 | File | What to edit |
 | --- | --- |
-| `index.html` | Homepage event summaries, navigation, and PTO team names/contact links |
-| `app.js` | Detailed event content and view-switching behavior |
+| `content.js` | All events, meeting documents/recaps, team contacts, resources, and committees |
+| `content-sources.md` | Source links, migration decisions, and unresolved conflicts |
+| `index.html` | Page shell and navigation |
+| `app.js` | Content rendering, automatic event ordering, and hash navigation |
 | `design.css` | Shared visual styles and tokens |
 | `design.md` | Design rules and rationale |
 | `site.css` | Standalone page shell |
@@ -43,9 +45,9 @@ For a project repository the URL is usually `https://OWNER.github.io/REPOSITORY/
 | `design-system.html` | Visual reference, component examples, and embedded token inventory |
 | `design-system.css` | Reference-page-only table and specimen layout |
 
-Event summary information currently appears in `index.html`, while event details are in `app.js`; update both when a date changes. The design-system page has an embedded stylesheet snapshot for documentation, so refresh it when changing `design.css`.
+Update each event once in `content.js`; both listings and detail views read from it. Imported information is a reviewed snapshot and does not synchronize automatically with the old website. The design-system page has an embedded stylesheet snapshot for documentation, so refresh it when changing `design.css`.
 
-The prototype switches views within a single page. Individual event URLs, browser history integration, and focus management after view changes remain future implementation work.
+The site uses shareable hash URLs within a single page, with browser history and heading focus after navigation. For example, `#meetings` opens the archive and `#event/2026-04-15-general` opens that meeting.
 
 ## Handing it to the next PTO team
 
