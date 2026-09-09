@@ -1,0 +1,12 @@
+#fireside-refined .ds-nav{padding-block:16px;border-bottom:1px solid var(--fr-line)}
+#fireside-refined .ds-block{padding-block:var(--fr-section-space);border-bottom:1px solid var(--fr-line)}
+#fireside-refined .ds-type{padding:24px 0;border-bottom:1px solid var(--fr-line)}
+#fireside-refined .ds-type code{display:block;margin-bottom:16px;color:var(--fr-muted)}
+#fireside-refined code,#fireside-refined pre{font:var(--fr-type-meta);font-family:monospace;overflow-wrap:anywhere}
+#fireside-refined pre{white-space:pre-wrap;padding:24px;background:var(--fr-wash)}
+#fireside-refined table{border-collapse:collapse;width:100%;font:var(--fr-type-meta)}
+#fireside-refined :is(th,td){text-align:left;vertical-align:top;padding:16px 8px;border-bottom:1px solid var(--fr-line);overflow-wrap:anywhere}
+#fireside-refined th{font-weight:400;color:var(--fr-muted)}
+#fireside-refined .ds-swatch{display:inline-block;width:24px;height:24px;margin-right:8px;vertical-align:middle;border:1px solid var(--fr-line)}
+#fireside-refined .ds-block li{margin-bottom:8px}
+@media(max-width:720px){#fireside-refined .ds-table-wrap{overflow-x:auto}#fireside-refined table{min-width:480px}}

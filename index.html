@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fireside PTO</title>
+<meta name="description" content="Fireside PTO website concept: events, meeting records, volunteer opportunities, and the PTO team.">
+<link rel="icon" href="assets/fireside-logo.png">
+<link rel="stylesheet" href="design.css">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<div id="fireside-refined" aria-label="Refined Fireside family bulletin">
+  <header class="fr-header">
+    <button class="fr-brand" data-home aria-label="Fireside PTO home"><img src="assets/fireside-logo.png" alt="Fireside Falcons"><span class="fr-brand-copy">Fireside PTO<span>Parent Teacher Organization</span></span></button>
+    <nav aria-label="Main navigation"><button data-section="events">Events</button><button data-team>PTO Team</button><a href="https://www.firesidepto.org/volunteering" target="_blank" rel="noopener">Volunteer</a><a href="https://www.firesidepto.org/policiesforms" target="_blank" rel="noopener">Resources</a></nav>
+    <a class="fr-support" href="https://www.firesidepto.org/fundraising" target="_blank" rel="noopener">Donate ↗</a>
+  </header>
+  <main id="fr-home">
+    <section class="fr-hero">
+      <div class="fr-kicker">UP NEXT AT FIRESIDE <span>SEPTEMBER 16, 2026</span></div>
+      <div class="fr-hero-grid"><div><h1>A new school year.<br>A chance to connect.</h1><p>Join your Fireside community for our next PTO general meeting. Every parent and caregiver is welcome.</p><button class="fr-primary" data-event="next">View meeting details <span>→</span></button></div><aside class="fr-next"><span class="fr-label">PTO GENERAL MEETING</span><div class="fr-date">Wednesday,<br>September 16</div><p>5:30–6:45 pm<br>Fireside Amphitheater</p><div class="fr-note">Pizza and free babysitting provided.</div></aside></div>
+    </section>
+    <section class="fr-events" id="fr-events-section">
+      <div class="fr-section-top"><h2>Around Fireside</h2><button class="fr-inline" data-section="events">All events →</button></div>
+      <div id="fr-upcoming">
+        <button class="fr-event-row" data-event="next"><span class="fr-calendar"><span>SEP</span>16</span><span class="fr-row-main"><span class="fr-label">PTO MEETING</span><strong>September general meeting</strong><span>5:30–6:45 pm · Fireside Amphitheater</span></span><span class="fr-row-end">Details & agenda <span>→</span></span></button>
+        <button class="fr-event-row" data-event="run"><span class="fr-calendar"><span>THIS</span>Fall</span><span class="fr-row-main"><span class="fr-label">FUNDRAISER</span><strong>Fireside Fun Run</strong><span>A school-wide day of movement and support.</span></span><span class="fr-row-end">Event details <span>→</span></span></button>
+        <button class="fr-event-row" data-event="movie"><span class="fr-calendar"><span>OCT</span>02</span><span class="fr-row-main"><span class="fr-label">COMMUNITY EVENT</span><strong>Outdoor movie night</strong><span>5:30–8:30 pm · An evening with Fireside families.</span></span><span class="fr-row-end">Event details <span>→</span></span></button>
+      </div>
+      <div id="fr-past" hidden><p class="fr-archive-intro">Meeting summaries, agendas, and minutes stay together with the meeting they belong to.</p><button class="fr-event-row" data-event="past"><span class="fr-calendar"><span>PAST</span>PTO</span><span class="fr-row-main"><span class="fr-label">ILLUSTRATIVE ARCHIVE ENTRY</span><strong>Spring general meeting</strong><span>See how a completed meeting would appear.</span></span><span class="fr-row-end">Summary & minutes <span>→</span></span></button><a class="fr-inline" href="https://www.firesidepto.org/meetingsminutes" target="_blank" rel="noopener">Open the current meeting archive ↗</a></div>
+    </section>
+    <section class="fr-bottom"><div><span class="fr-label">A LITTLE TIME MAKES A DIFFERENCE</span><h2>Find your way to help.</h2><p>Welcome a family, help with an event, or join a committee. There’s a place for every kind of contribution.</p><a class="fr-inline" href="https://www.firesidepto.org/volunteering" target="_blank" rel="noopener">Explore volunteering ↗</a></div><div><span class="fr-label">YOUR PTO, IN THE OPEN</span><h2>Stay connected to the decisions.</h2><p>Catch up on past meetings and see how your community’s support is used.</p><div class="fr-links"><button class="fr-inline" data-section="meetings">Browse past meetings →</button><a class="fr-inline" href="https://www.firesidepto.org/policiesforms" target="_blank" rel="noopener">Budgets & spending ↗</a></div></div></section>
+  </main>
+  <main id="fr-events-page" hidden>
+    <section class="fr-page-intro"><span class="fr-label">THE FIRESIDE CALENDAR</span><h1>Events & gatherings</h1><p>See what’s coming up, or catch up on the conversations and decisions from past PTO meetings.</p></section>
+    <section class="fr-events"><div class="fr-section-top"><h2 id="fr-events-heading">Coming up</h2><div class="fr-switch" role="group" aria-label="Events view"><button data-section="events" aria-pressed="true">Upcoming events</button><button data-section="meetings" aria-pressed="false">Past meetings</button></div></div><div id="fr-events-list"></div><div id="fr-meetings-list" hidden></div></section>
+  </main>
+  <main id="fr-team" hidden>
+    <section class="fr-page-intro"><span class="fr-label">2026–27 SCHOOL YEAR</span><h1>Meet your PTO team.</h1><p>The people serving in named PTO roles, helping organize our events, manage funds, and keep families connected.</p><div class="fr-status">Directory preview · Photos and individual role contacts still to be added.</div></section>
+    <section class="fr-team-grid" aria-label="PTO role holders">
+      <article><div class="fr-photo" role="img" aria-label="Photo placeholder for Natalie Drummond">ND</div><span class="fr-label">PRESIDENT</span><h2>Natalie Drummond</h2><a class="fr-inline" href="mailto:chairfiresidepto@gmail.com">Email the PTO chair ↗</a></article>
+      <article><div class="fr-photo" role="img" aria-label="Photo placeholder for Leanne Duhon">LD</div><span class="fr-label">FUNDRAISING</span><h2>Leanne Duhon</h2><span class="fr-contact-pending">Role contact to be added</span></article>
+      <article><div class="fr-photo" role="img" aria-label="Photo placeholder for Chloe Fitch">CF</div><span class="fr-label">PROGRAMS</span><h2>Chloe Fitch</h2><a class="fr-inline" href="mailto:programsfiresidepto@gmail.com">Email the programs team ↗</a></article>
+      <article><div class="fr-photo" role="img" aria-label="Photo placeholder for Sivan Kfir">SK</div><span class="fr-label">PROGRAMS CO-CHAIR</span><h2>Sivan Kfir</h2><a class="fr-inline" href="mailto:programsfiresidepto@gmail.com">Email the programs team ↗</a></article>
+      <article><div class="fr-photo" role="img" aria-label="Photo placeholder for Jon Mortimer">JM</div><span class="fr-label">TREASURER</span><h2>Jon Mortimer</h2><span class="fr-contact-pending">Role contact to be added</span></article>
+      <article><div class="fr-photo" role="img" aria-label="Photo placeholder for Shelly Shacham">SS</div><span class="fr-label">COMMUNICATIONS</span><h2>Shelly Shacham</h2><span class="fr-contact-pending">Role contact to be added</span></article>
+      <article><div class="fr-photo" role="img" aria-label="Photo placeholder for Elinor Mayer-Tzang">EM</div><span class="fr-label">COMMUNICATIONS</span><h2>Elinor Mayer-Tzang</h2><span class="fr-contact-pending">Role contact to be added</span></article>
+    </section><section class="fr-team-help"><h2>Not sure who to ask?</h2><p>Contact the PTO and we’ll help you find the right person.</p><div class="fr-links"><a class="fr-inline" href="mailto:chairfiresidepto@gmail.com">Contact the PTO ↗</a><a class="fr-inline" href="https://www.firesidepto.org/ptoboard" target="_blank" rel="noopener">Current full roster & role descriptions ↗</a></div></section>
+  </main>
+  <main id="fr-detail" hidden aria-live="polite"></main>
+  <footer><span>Fireside PTO<span class="fr-footer-sub">Every Fireside family belongs here.</span></span><a href="mailto:chairfiresidepto@gmail.com">Contact the PTO ↗</a></footer>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
