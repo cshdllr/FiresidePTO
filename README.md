@@ -63,3 +63,8 @@ The site uses shareable hash URLs within a single page, with browser history and
 Check the homepage, Events including Past meetings, a detail view, and the PTO Team page on desktop and mobile. Test links and keyboard navigation. Follow `design.md` when changing the visual system.
 
 The original logo and school branding are supplied assets; this repository does not assert new ownership or grant a separate license to them.
+# Sponsors
+
+The homepage carousel is maintained in `sponsors.js`. It displays the 12 sponsors from the supplied 2025–2026 artwork in `assets/sponsors-2025-2026.png`, using CSS crops to preserve the original logos. Crop coordinates use a 2016 × 1243 reference size. For future seasons, prefer separate original logo files for sharper results, update the year label, and verify the sponsor roster. Motion and reduced-motion behavior are in `site.css`.
+
+Sponsor entries in `sponsors.js` have an optional `url` (currently null). Set this to a verified sponsor website to enable its logo link. Duplicate logos stay out of keyboard navigation. The strip pauses on hover and shows a static list during keyboard focus or reduced motion.

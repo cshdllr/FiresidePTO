@@ -86,3 +86,10 @@ Special geometry is not a spacing token: the logo is 72px (56px on small screens
 4. Before production, verify text enlargement, browser zoom/reflow, keyboard order, focus, real link destinations, and screen-reader semantics.
 
 The content migration adds shareable hash event URLs, browser back/forward integration, and heading focus after navigation. The site remains a static single-page application; production accessibility verification is still required. Navigation and event filters use real links, with `aria-current` indicating the selected destination.
+# Sponsor motion
+
+The homepage sponsor strip uses the shared heading, metadata, spacing, and control styles. Logos retain their original colors on white and fit within a 172 × 100px area without stretching. A 65-second linear loop moves right to left. Hovering over the logos pauses movement. When sponsor links receive keyboard focus, the strip becomes a static wrapping list so every link stays visible. Reduced-motion preferences replace the animation with a wrapping, static list of every sponsor; duplicate logos are hidden from assistive technology.
+
+## Resource and volunteer directories
+
+Resources and volunteering use simple two-column directories that stack below 720px. Headings and spacing separate groups; avoid section rules, repeated eyebrow labels, and introductory copy that restates a heading. Resources retain all document links, with older reports in a native disclosure. Volunteer entries contain a name, commitment, and one concise description, with signup and contact actions at the top. Use existing type and spacing tokens.
