@@ -23,7 +23,7 @@ Then visit `http://localhost:8000`. The component reference is `design-system.ht
 1. Push this repository to the GitHub owner and repository chosen by the PTO.
 2. On GitHub, go to **Settings → Pages**.
 3. Under **Build and deployment**, choose **Deploy from a branch**.
-4. Select the branch containing these files (currently `master`) and **/(root)**, then save.
+4. Select the `main` branch and **/(root)**, then save.
 5. Wait for GitHub's Pages deployment to finish. GitHub displays the public site URL on that settings page.
 
 For a project repository the URL is usually `https://OWNER.github.io/REPOSITORY/`. All local assets use relative paths so the repository subpath works. `.nojekyll` tells GitHub to serve these static files directly.
