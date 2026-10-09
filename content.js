@@ -1,4 +1,4 @@
-// Public content imported from firesidepto.org. See content-sources.md.
+// Public content imported from firesidepto.org, plus PTO updates. See content-sources.md.
 window.FIRESIDE_DATA = {
   "importedAt": "2026-09-09",
   "archiveUrl": "https://docs.google.com/document/d/16iDrdOXmZVlK3X2jXQ81Q5N1UsZRyvEUwSic4-W5Kfc/edit",
@@ -25,7 +25,9 @@ window.FIRESIDE_DATA = {
       ],
       "source": "https://docs.google.com/document/d/1vYphmWpMnJl7Dib-D7IvyZfhMQPUhQEvod3hoxYwLaE/edit",
       "summary": [],
-      "note": ""
+      "note": "",
+      "endDate": null,
+      "image": null
     },
     {
       "id": "2025-07-28-board",
@@ -47,7 +49,9 @@ window.FIRESIDE_DATA = {
       ],
       "source": "https://docs.google.com/document/d/1vYphmWpMnJl7Dib-D7IvyZfhMQPUhQEvod3hoxYwLaE/edit",
       "summary": [],
-      "note": ""
+      "note": "",
+      "endDate": null,
+      "image": null
     },
     {
       "id": "2025-09-12-board",
@@ -69,7 +73,9 @@ window.FIRESIDE_DATA = {
       ],
       "source": "https://docs.google.com/document/d/1vYphmWpMnJl7Dib-D7IvyZfhMQPUhQEvod3hoxYwLaE/edit",
       "summary": [],
-      "note": ""
+      "note": "",
+      "endDate": null,
+      "image": null
     },
     {
       "id": "2025-10-03-board",
@@ -91,7 +97,9 @@ window.FIRESIDE_DATA = {
       ],
       "source": "https://docs.google.com/document/d/1vYphmWpMnJl7Dib-D7IvyZfhMQPUhQEvod3hoxYwLaE/edit",
       "summary": [],
-      "note": ""
+      "note": "",
+      "endDate": null,
+      "image": null
     },
     {
       "id": "2025-11-14-board",
@@ -113,7 +121,9 @@ window.FIRESIDE_DATA = {
       ],
       "source": "https://docs.google.com/document/d/1vYphmWpMnJl7Dib-D7IvyZfhMQPUhQEvod3hoxYwLaE/edit",
       "summary": [],
-      "note": ""
+      "note": "",
+      "endDate": null,
+      "image": null
     },
     {
       "id": "2025-12-12-board",
@@ -135,7 +145,9 @@ window.FIRESIDE_DATA = {
       ],
       "source": "https://docs.google.com/document/d/1vYphmWpMnJl7Dib-D7IvyZfhMQPUhQEvod3hoxYwLaE/edit",
       "summary": [],
-      "note": ""
+      "note": "",
+      "endDate": null,
+      "image": null
     },
     {
       "id": "2026-01-09-board",
@@ -157,7 +169,9 @@ window.FIRESIDE_DATA = {
       ],
       "source": "https://docs.google.com/document/d/1vYphmWpMnJl7Dib-D7IvyZfhMQPUhQEvod3hoxYwLaE/edit",
       "summary": [],
-      "note": ""
+      "note": "",
+      "endDate": null,
+      "image": null
     },
     {
       "id": "2026-02-13-board",
@@ -179,7 +193,9 @@ window.FIRESIDE_DATA = {
       ],
       "source": "https://docs.google.com/document/d/1vYphmWpMnJl7Dib-D7IvyZfhMQPUhQEvod3hoxYwLaE/edit",
       "summary": [],
-      "note": ""
+      "note": "",
+      "endDate": null,
+      "image": null
     },
     {
       "id": "2026-03-13-board",
@@ -201,7 +217,9 @@ window.FIRESIDE_DATA = {
       ],
       "source": "https://docs.google.com/document/d/1vYphmWpMnJl7Dib-D7IvyZfhMQPUhQEvod3hoxYwLaE/edit",
       "summary": [],
-      "note": ""
+      "note": "",
+      "endDate": null,
+      "image": null
     },
     {
       "id": "2026-04-10-board",
@@ -223,7 +241,9 @@ window.FIRESIDE_DATA = {
       ],
       "source": "https://docs.google.com/document/d/1vYphmWpMnJl7Dib-D7IvyZfhMQPUhQEvod3hoxYwLaE/edit",
       "summary": [],
-      "note": ""
+      "note": "",
+      "endDate": null,
+      "image": null
     },
     {
       "id": "2026-05-08-board",
@@ -245,7 +265,9 @@ window.FIRESIDE_DATA = {
       ],
       "source": "https://docs.google.com/document/d/1vYphmWpMnJl7Dib-D7IvyZfhMQPUhQEvod3hoxYwLaE/edit",
       "summary": [],
-      "note": ""
+      "note": "",
+      "endDate": null,
+      "image": null
     },
     {
       "id": "2025-08-22-general",
@@ -258,7 +280,9 @@ window.FIRESIDE_DATA = {
       "documents": [],
       "source": "https://docs.google.com/document/d/1vYphmWpMnJl7Dib-D7IvyZfhMQPUhQEvod3hoxYwLaE/edit",
       "summary": [],
-      "note": "No minutes linked in the source index."
+      "note": "No minutes linked in the source index.",
+      "endDate": null,
+      "image": null
     },
     {
       "id": "2025-09-17-general",
@@ -283,7 +307,9 @@ window.FIRESIDE_DATA = {
         "The meeting covered curriculum and classroom updates, PTO funding priorities, Fun Run fundraising, and plans for community events.",
         "Families discussed clearer fundraising communication and opportunities to volunteer."
       ],
-      "note": ""
+      "note": "",
+      "endDate": null,
+      "image": null
     },
     {
       "id": "2025-11-21-general",
@@ -308,7 +334,9 @@ window.FIRESIDE_DATA = {
         "The meeting included a school-safety presentation, classroom updates, seasonal community support, and a review of fundraising and small-grant funding.",
         "September meeting minutes and the current agenda were unanimously approved."
       ],
-      "note": ""
+      "note": "",
+      "endDate": null,
+      "image": null
     },
     {
       "id": "2026-01-30-general",
@@ -333,7 +361,9 @@ window.FIRESIDE_DATA = {
         "The PTO reviewed the first half of the school year, including fundraising and new volunteer committees.",
         "A gifted-education presentation covered identification, enrichment, and ways to improve family communication."
       ],
-      "note": "Date follows the 2025–26 meeting index; the minutes heading retains an inconsistent 2025 year."
+      "note": "Date follows the 2025–26 meeting index; the minutes heading retains an inconsistent 2025 year.",
+      "endDate": null,
+      "image": null
     },
     {
       "id": "2026-04-15-general",
@@ -358,7 +388,9 @@ window.FIRESIDE_DATA = {
         "Teachers described how paraeducators support students across grade levels.",
         "The 2026–27 PTO board was unanimously approved, and the proposed budget and upcoming spring events were discussed."
       ],
-      "note": "Date follows the 2025–26 meeting index; the minutes heading retains an inconsistent 2025 year."
+      "note": "Date follows the 2025–26 meeting index; the minutes heading retains an inconsistent 2025 year.",
+      "endDate": null,
+      "image": null
     },
     {
       "id": "2026-05-13-general",
@@ -383,7 +415,9 @@ window.FIRESIDE_DATA = {
         "The volunteer reception recognized the outgoing board and introduced the 2026–27 team.",
         "The 2026–27 budget was unanimously approved."
       ],
-      "note": "Date follows the 2025–26 meeting index; the minutes heading retains an inconsistent 2025 year."
+      "note": "Date follows the 2025–26 meeting index; the minutes heading retains an inconsistent 2025 year.",
+      "endDate": null,
+      "image": null
     },
     {
       "id": "2026-07-30-board",
@@ -407,7 +441,9 @@ window.FIRESIDE_DATA = {
       "summary": [
         "The board discussed back-to-school activities, the meeting schedule, fundraising, and upcoming programs."
       ],
-      "note": ""
+      "note": "",
+      "endDate": null,
+      "image": null
     },
     {
       "id": "2026-08-21-general",
@@ -420,7 +456,9 @@ window.FIRESIDE_DATA = {
       "documents": [],
       "source": "https://docs.google.com/document/d/1ITR581MbFxG0RLNDTQe8dMXvhlLCw5XEtr2dtHO8odc/edit",
       "summary": [],
-      "note": "Listed as Coffee and chat; no minutes linked in the source index."
+      "note": "Listed as Coffee and chat; no minutes linked in the source index.",
+      "endDate": null,
+      "image": null
     },
     {
       "id": "2026-09-16-general",
@@ -433,7 +471,9 @@ window.FIRESIDE_DATA = {
       "documents": [],
       "source": "https://www.firesidepto.org/meetingsminutes",
       "summary": [],
-      "note": "Pizza and free babysitting provided. Arrive 15 minutes early to mingle."
+      "note": "Pizza and free babysitting provided. Arrive 15 minutes early to mingle.",
+      "endDate": null,
+      "image": null
     },
     {
       "id": "2026-11-20-general",
@@ -446,7 +486,9 @@ window.FIRESIDE_DATA = {
       "documents": [],
       "source": "https://www.firesidepto.org/meetingsminutes",
       "summary": [],
-      "note": "Coffee provided. Arrive 15 minutes early to mingle."
+      "note": "Coffee provided. Arrive 15 minutes early to mingle.",
+      "endDate": null,
+      "image": null
     },
     {
       "id": "2027-01-29-general",
@@ -459,7 +501,9 @@ window.FIRESIDE_DATA = {
       "documents": [],
       "source": "https://www.firesidepto.org/meetingsminutes",
       "summary": [],
-      "note": "Coffee provided. Arrive 15 minutes early to mingle."
+      "note": "Coffee provided. Arrive 15 minutes early to mingle.",
+      "endDate": null,
+      "image": null
     },
     {
       "id": "2027-04-14-general",
@@ -472,7 +516,9 @@ window.FIRESIDE_DATA = {
       "documents": [],
       "source": "https://www.firesidepto.org/meetingsminutes",
       "summary": [],
-      "note": "Pizza and free babysitting provided. Arrive 15 minutes early to mingle."
+      "note": "Pizza and free babysitting provided. Arrive 15 minutes early to mingle.",
+      "endDate": null,
+      "image": null
     }
   ],
   "events": [
@@ -488,7 +534,9 @@ window.FIRESIDE_DATA = {
         "An outdoor movie night for the Fireside community."
       ],
       "documents": [],
-      "note": "The current homepage lists October 2; July planning minutes mentioned October 3. Confirm with the organizer before attending."
+      "note": "The current homepage lists October 2; July planning minutes mentioned October 3. Confirm with the organizer before attending.",
+      "endDate": null,
+      "image": null
     },
     {
       "id": "2026-fun-run",
@@ -502,7 +550,9 @@ window.FIRESIDE_DATA = {
         "The Fun Run is the PTO’s main annual fundraiser, supporting school programs and staff."
       ],
       "documents": [],
-      "note": "Date to confirm: the homepage says Friday, September 26, but September 26, 2026 is a Saturday."
+      "note": "Date to confirm: the homepage says Friday, September 26, but September 26, 2026 is a Saturday.",
+      "endDate": null,
+      "image": null
     },
     {
       "id": "2027-volunteer-appreciation",
@@ -514,7 +564,30 @@ window.FIRESIDE_DATA = {
       "source": "https://www.firesidepto.org/meetingsminutes",
       "summary": [],
       "documents": [],
-      "note": "Date to confirm: May 5 on the homepage, May 8 on the meetings page, and May 12 in the 2026–27 meeting index."
+      "note": "Date to confirm: May 5 on the homepage, May 8 on the meetings page, and May 12 in the 2026–27 meeting index.",
+      "endDate": null,
+      "image": null
+    },
+    {
+      "id": "2026-halloween-costume-sale",
+      "date": "2026-10-01",
+      "endDate": "2026-10-31",
+      "type": "fundraiser",
+      "title": "Halloween costume sale",
+      "time": "",
+      "place": "",
+      "source": "",
+      "summary": [
+        "Our Halloween costume sale runs throughout October.",
+        "Shopping details, hours, and location will be shared here."
+      ],
+      "documents": [],
+      "image": null,
+      "coverImage": {
+        "src": "assets/halloween-costume-sale.png",
+        "alt": "Illustrative display of children’s Halloween costumes on a rack",
+        "caption": "Illustrative image; items shown are examples."
+      }
     }
   ],
   "archives": [
@@ -1186,6 +1259,7 @@ window.FIRESIDE_DATA = {
   "team": [
     {
       "name": "Natalie Drummond",
+      "photo": { "src": "assets/team/natalie-drummond.jpg", "position": "50% 42%" },
       "role": "President",
       "email": "chairfiresidepto@gmail.com"
     },
@@ -1196,21 +1270,25 @@ window.FIRESIDE_DATA = {
     },
     {
       "name": "Ashley Masin",
+      "photo": { "src": "assets/team/ashley-masin.jpg", "position": "50% 50%" },
       "role": "Fundraising Co-Chair",
       "email": null
     },
     {
       "name": "Heather Kistler Kinz",
+      "photo": { "src": "assets/team/heather-kistler-kinz.jpg", "position": "50% 50%" },
       "role": "Secretary",
       "email": "SecretaryFiresidePTO@gmail.com"
     },
     {
       "name": "Chloe Fitch",
+      "photo": { "src": "assets/team/chloe-fitch.jpg", "position": "50% 50%" },
       "role": "Programs Co-Chair",
       "email": "ProgramsFiresidePTO@gmail.com"
     },
     {
       "name": "Sivan Kfir",
+      "photo": { "src": "assets/team/sivan-kfir.jpg", "position": "50% 50%" },
       "role": "Programs Co-Chair",
       "email": "ProgramsFiresidePTO@gmail.com"
     },
@@ -1221,11 +1299,13 @@ window.FIRESIDE_DATA = {
     },
     {
       "name": "Shelly Shacham",
+      "photo": { "src": "assets/team/shelly-shacham.jpg", "position": "50% 42%" },
       "role": "Communications Co-Chair",
       "email": "CommFiresidePTO@gmail.com"
     },
     {
       "name": "Elinor Mayer-Tzang",
+      "photo": { "src": "assets/team/elinor-mayer-tzang.jpg", "position": "50% 50%" },
       "role": "Communications Co-Chair",
       "email": "CommFiresidePTO@gmail.com"
     },
@@ -1236,6 +1316,7 @@ window.FIRESIDE_DATA = {
     },
     {
       "name": "Jessica Robinson",
+      "photo": { "src": "assets/team/jessica-robinson.jpg", "position": "50% 40%" },
       "role": "Bookkeeper · non-board role",
       "email": null
     }
@@ -1244,47 +1325,110 @@ window.FIRESIDE_DATA = {
     {
       "name": "Ambassador Program",
       "description": "Welcome incoming families and share practical school and community tips.",
-      "commitment": "Low commitment"
+      "commitment": "Low commitment",
+      "id": "ambassador-program",
+      "body": [
+        "Join our community-building efforts by welcoming new 1st–5th grade families to Fireside! As a Falcon Friend Family (FFF), you’ll be paired with an incoming family with similarly aged children. Your role is to provide a warm welcome and serve as a friendly resource — offering tips about drop-off routines, local sports leagues, community activities, or even arranging a playdate. Every existing Fireside family is welcome to participate, and we’ll provide all the key information you’ll need. This is a low-commitment opportunity that makes a big impact and helps demonstrate how welcoming and inclusive our Fireside community is."
+      ],
+      "season": "",
+      "source": "https://www.firesidepto.org/volunteering",
+      "photos": []
     },
     {
       "name": "Carnival Committee",
       "description": "Coordinate games, prizes, vendors, and logistics for the May carnival.",
-      "commitment": "4–5 meetings"
+      "commitment": "4–5 meetings",
+      "id": "carnival-committee",
+      "body": [
+        "The Carnival Committee plans and organizes one of Fireside’s most exciting annual events, our spring Carnival! We normally hire a company to provide the carnival components, and the committee helps choose the games and raffle prizes, coordinate additional vendors, and manage event logistics. This is a high-energy, fun-filled committee that brings joy to our entire community!"
+      ],
+      "season": "Annual event in May",
+      "source": "https://www.firesidepto.org/volunteering",
+      "photos": []
     },
     {
       "name": "Fun Run Committee",
       "description": "Plan the September fundraiser and its celebration.",
-      "commitment": "4–5 meetings across spring and fall"
+      "commitment": "4–5 meetings across spring and fall",
+      "id": "fun-run-committee",
+      "body": [
+        "The Fun Run is our biggest fundraiser of the year! The Fun Run Committee helps plan and organize this exciting school-wide event. The Fun Run takes place in September during school hours followed by a celebratory after-school event. This is a great way to get involved and help support our students through active fun!"
+      ],
+      "season": "Annual event in September",
+      "source": "https://www.firesidepto.org/volunteering",
+      "photos": []
     },
     {
       "name": "Garden Stewardship Committee",
       "description": "Support the school garden with guidance from Garden to Table.",
-      "commitment": "No gardening experience needed"
+      "commitment": "No gardening experience needed",
+      "id": "garden-stewardship-committee",
+      "body": [
+        "The Fireside Garden to Table garden is a hands-on learning garden where all of our students participate in standards-based education aligned with BVSD curriculum.  No green thumb is needed - our partner non-profit, Garden to Table, provides weekly guidance and can answer questions as needed! This is a great opportunity to contribute to the Fireside community, spend time outdoors, and learn more about gardening.  It’s also a great activity to do with your kids!"
+      ],
+      "season": "",
+      "source": "https://www.firesidepto.org/volunteering",
+      "photos": []
     },
     {
       "name": "Labor Day Parade Committee",
       "description": "Help organize and encourage families during the community parade.",
-      "commitment": "No committee meetings"
+      "commitment": "No committee meetings",
+      "id": "labor-day-parade-committee",
+      "body": [
+        "Help lead the fun in one of Louisville’s most beloved community traditions! Parade leaders help organize families, distribute materials, hand out candy, and lead cheers along the route. This is a low commitment committee since no meetings are needed, and the logistics are taken care of by the City of Louisville.  Bring your energy, your smiles, and your Fireside pride to show off our amazing community spirit in this annual Labor Day Parade!"
+      ],
+      "season": "",
+      "source": "https://www.firesidepto.org/volunteering",
+      "photos": []
     },
     {
       "name": "Multicultural Celebration Committee",
       "description": "Help staff organize the January celebration of food and culture.",
-      "commitment": "3–4 meetings"
+      "commitment": "3–4 meetings",
+      "id": "multicultural-celebration-committee",
+      "body": [
+        "Help assist the Fireside staff in organizing and planning the annual Multicultural Celebration for our school families. This is a fun (and delicious) event where we gather to enjoy foods prepared by Fireside families showcasing their cultures and celebrate the diversity of our school community! It also includes a unique musical or dance performance. This is an exciting event that the kids look forward to every year."
+      ],
+      "season": "Annual event in January",
+      "source": "https://www.firesidepto.org/volunteering",
+      "photos": []
     },
     {
       "name": "Staff Appreciation Committee",
       "description": "Organize staff breakfast, conference meals, and appreciation week.",
-      "commitment": "Mix of in-person and virtual tasks"
+      "commitment": "Mix of in-person and virtual tasks",
+      "id": "staff-appreciation-committee",
+      "body": [
+        "Members of this team organize staff appreciation events throughout the year. Events include the Staff Breakfast (August), Conference Meals (October & February), and Staff Appreciation Week (May). This committee offers a minimal time commitment with a mix of in-person and virtual tasks — perfect for parents who want to give back to our amazing teachers and staff!"
+      ],
+      "season": "",
+      "source": "https://www.firesidepto.org/volunteering",
+      "photos": []
     },
     {
       "name": "STEM Fair Committee",
       "description": "Coordinate the spring fair, with day-of helpers and judges needed closer to the event.",
-      "commitment": "4–5 meetings"
+      "commitment": "4–5 meetings",
+      "id": "stem-fair-committee",
+      "body": [
+        "Inspire young scientists and engineers by helping organize the annual STEM Fair! The committee works alongside Fireside staff to coordinate event logistics and support student participants as they showcase their projects. Additional volunteer opportunities — including day-of helpers and judges — will be available closer to the event. A great choice for anyone passionate about learning and discovery!"
+      ],
+      "season": "Annual event around March/April",
+      "source": "https://www.firesidepto.org/volunteering",
+      "photos": []
     },
     {
       "name": "Yearbook Committee",
       "description": "Organize photos, page layouts, and yearbook distribution.",
-      "commitment": "Largely remote"
+      "commitment": "Largely remote",
+      "id": "yearbook-committee",
+      "body": [
+        "Ever wondered what it’s like to help publish a book? Here’s your chance! The Yearbook Committee captures the heart of our school year by creating a treasured keepsake for students and families. Volunteers help organize photos and pages by grade, take pictures at school events when possible, collect photos from families and teachers, and assist with yearbook distribution. This committee is largely remote, so perfect if you prefer to work on your own time. This is a fun, creative project full of smiles and memories!"
+      ],
+      "season": "",
+      "source": "https://www.firesidepto.org/volunteering",
+      "photos": []
     }
   ],
   "familyLinks": [
@@ -1308,5 +1452,25 @@ window.FIRESIDE_DATA = {
       "label": "PTO board roles and responsibilities",
       "url": "https://www.firesidepto.org/_files/ugd/f8a287_5031d5e3b099461c86e7e9313e55b8dc.pdf"
     }
-  ]
+  ],
+  "fundraising": {
+    "source": "https://www.firesidepto.org/fundraising",
+    "spiritWear": {
+      "url": "https://firesidemerch.square.site/",
+      "source": "https://www.firesidepto.org/spiritwear",
+      "description": "Fireside Falcons apparel for kids and adults, from local vendor 52Native.",
+      "image": {
+        "src": "https://static.wixstatic.com/media/f8a287_3aa3f70af23a429da75fc44ff2c772ce~mv2.png",
+        "alt": "Fireside spirit wear featured by the PTO"
+      }
+    },
+    "sponsorshipEmail": "fundraisefiresidepto@gmail.com",
+    "sponsorshipSource": "https://www.firesidepto.org/sponsorships",
+    "kingSoopers": {
+      "url": "https://www.kingsoopers.com/",
+      "code": "NE165",
+      "source": "https://www.firesidepto.org/grocerystore"
+    },
+    "milkCapsSource": "https://www.firesidepto.org/additionalnocostprograms"
+  }
 };

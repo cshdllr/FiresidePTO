@@ -6,15 +6,16 @@
 <title>Fireside PTO</title>
 <meta name="description" content="Fireside PTO events, meeting records, volunteer opportunities, resources, and team contacts.">
 <link rel="icon" href="assets/fireside-logo.png">
-<link rel="stylesheet" href="design.css">
-<link rel="stylesheet" href="site.css?v=2">
+<link rel="stylesheet" href="design.css?v=donate-arrow-1">
+<link rel="stylesheet" href="site.css?v=flexible-event-cards-1">
 </head>
 <body>
 <div id="fireside-refined" aria-label="Fireside PTO">
   <header class="fr-header">
     <a class="fr-brand" href="#home" aria-label="Fireside PTO home"><img src="assets/fireside-logo.png" alt="Fireside Falcons"><span class="fr-brand-copy">Fireside PTO<span>Parent Teacher Organization</span></span></a>
-    <nav aria-label="Main navigation"><a href="#events">Events</a><a href="#team">PTO Team</a><a href="#volunteer">Volunteer</a><a href="#resources">Resources</a></nav>
-    <a class="fr-support" href="https://amnelnkw.donorsupport.co/page/FUNSYHPEWMG" target="_blank" rel="noopener">Donate ↗</a>
+    <nav id="fr-main-nav" aria-label="Main navigation"><a href="#events">Events</a><a href="#volunteer">Volunteer</a><a href="#fundraising">Fundraising</a><a href="#team">PTO Team</a><a href="#resources">Resources</a></nav>
+    <a class="fr-support" href="https://amnelnkw.donorsupport.co/page/FUNSYHPEWMG" target="_blank" rel="noopener">Donate<span class="fr-donate-arrow" aria-hidden="true">&nbsp;→</span></a>
+    <button class="fr-menu-toggle" type="button" aria-controls="fr-main-nav" aria-expanded="false" aria-label="Open menu" hidden><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path class="fr-menu-open-icon" d="M4 6h16M4 12h16M4 18h16"/><path class="fr-menu-close-icon" d="m6 6 12 12M18 6 6 18"/></svg></button>
   </header>
   <main id="fr-home"><h1>Fireside PTO</h1><p>Events, meeting records, and ways to help your school community.</p></main>
   <main id="fr-events-page" hidden></main>
@@ -22,11 +23,14 @@
   <main id="fr-resources" hidden></main>
   <main id="fr-volunteer" hidden></main>
   <main id="fr-detail" hidden></main>
+  <main id="fr-program" hidden></main>
+  <main id="fr-fundraising" hidden></main>
   <noscript><p>Please enable JavaScript to browse this directory, or visit <a href="https://www.firesidepto.org/">the existing Fireside PTO website</a>.</p></noscript>
-  <footer><span>Fireside PTO<span class="fr-footer-sub">Every Fireside family belongs here.</span><span class="fr-footer-sub">Source content reviewed September 9, 2026.</span></span><a href="mailto:chairfiresidepto@gmail.com">Contact the PTO ↗</a></footer>
+  <footer><span class="fr-footer-brand">Fireside PTO<span class="fr-footer-sub">Every Fireside family belongs here.</span></span><a href="mailto:chairfiresidepto@gmail.com">Contact the PTO →</a></footer>
 </div>
-<script src="content.js"></script>
-<script src="app.js?v=2"></script>
-<script src="sponsors.js?v=2"></script>
+<script src="content.js?v=team-photos-1"></script>
+<script src="app.js?v=events-header-toggle-1"></script>
+<script src="sponsors.js?v=heading-1"></script>
+<script src="navigation.js?v=visible-donate-1"></script>
 </body>
 </html>

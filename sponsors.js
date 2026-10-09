@@ -1,6 +1,20 @@
 // Crop coordinates reference the supplied sponsor artwork at 2016 × 1243.
 // Replace with individual logo files when original artwork becomes available.
 (() => {
+  const websites = [
+  "https://www.oldfriendslouisville.com/",
+  "https://laura-shaffer.remax.com/",
+  "https://www.goddardschool.com/schools/co/louisville/louisville",
+  "https://gotgamecamp.com/colorado-programs-birthday-parties-and-events/",
+  "https://www.mchomes.co/",
+  "https://www.ascend-orthodontics.com/",
+  "https://www.optimindhealth.com/",
+  "https://www.paulscoffeeandtea.com/",
+  "https://www.thelouisvilleunderground.com/",
+  "https://artmajorstudio.com/louisville-colorado/",
+  "https://www.singingcookstore.com/",
+  "https://www.visitrelish.com/"
+];
   const sponsors = [
     ['Old Friends', 140, 310, 200, 170],
     ['E&L Team at RE/MAX Elevate', 360, 310, 207, 300],
@@ -14,12 +28,12 @@
     ['Art Major', 1295, 740, 315, 215],
     ['The Singing Cook', 1630, 810, 290, 120],
     ['Relish Food Hall / Pickleball', 1270, 975, 455, 190]
-  ].map(([name, x, y, width, height, clip, url = null]) => ({ name, x, y, width, height, clip, url }));
-  // Optional seventh value: verified website URL; use null for clip if unused.
+  ].map(([name, x, y, width, height, clip], index) => ({ name, x, y, width, height, clip, url: websites[index] }));
+  // Website order matches the logo list; verified October 7, 2026.
   const section = document.createElement('section');
   section.className = 'fr-sponsors';
   section.setAttribute('aria-labelledby', 'fr-sponsor-title');
-  section.innerHTML = '<div class="fr-section-top"><div><span class="fr-label">2025–2026 SPONSORS</span><h2 id="fr-sponsor-title">Thank you for supporting Fireside.</h2></div></div><div class="fr-sponsor-window"><div class="fr-sponsor-track"></div></div>';
+  section.innerHTML = '<div class="fr-section-top"><h2 id="fr-sponsor-title">Thank you for supporting Fireside!</h2><a class="fr-inline" href="#fundraising/sponsorship">Become a sponsor →</a></div><div class="fr-sponsor-window"><div class="fr-sponsor-track"></div></div>';
   const group = document.createElement('ul');
   group.className = 'fr-sponsor-group';
   sponsors.forEach(({name, x, y, width, height, clip, url}) => {
@@ -39,6 +53,8 @@
       const link = document.createElement('a');
       link.className = 'fr-sponsor-link';
       link.href = url;
+      link.target = "_blank";
+      link.rel = "noopener";
       link.append(logo);
       item.append(link);
     } else {

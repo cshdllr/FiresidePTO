@@ -1,0 +1,6 @@
+Generated with the built-in image_gen tool on October 7, 2026.
+Asset: assets/halloween-costume-sale.png
+Illustrative concept image, not a photo of actual sale inventory.
+
+Final prompt:
+Use case: photorealistic-natural. Asset type: wide website event-card cover, 3:2 landscape. Primary request: an inviting Halloween costume sale still life for an elementary school PTO. Subject: a small rack of children's dress-up costumes: a simple wizard cape and hat, colorful superhero cape and a soft animal costume, on wooden hangers, with a small pumpkin beneath. No people. Natural window light, real fabric textures, quiet neutral background, warm understated autumn colors. Refined minimal editorial photography, composition readable as a small card and safely cropped to 16:9. No text, logos, pricing, watermarks, or recognizable copyrighted characters.

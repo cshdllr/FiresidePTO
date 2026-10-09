@@ -39,3 +39,34 @@ Edit `content.js` to change events, meetings, resources, team members, or commit
 Every meeting has an ID, type (`general` or `board`), date, source URL, document links, and optional editorial summary. Do not add attendance lists or sensitive information merely because a document is linked publicly. Keep dates and contacts verifiable, and record future corrections here.
 
 The new hash URLs (for example `#event/2026-04-15-general`) work on GitHub Pages without server routing. Navigation supports browser back/forward and focuses the destination heading after a view change.
+
+## October 7, 2026 expansion
+
+Re-read the live [Volunteering](https://www.firesidepto.org/volunteering) page and preserved the original descriptions for all nine program pages. No identified program photos were available; `photos` is ready for supplied images.
+
+Fundraising content follows the live [Fundraising](https://www.firesidepto.org/fundraising), [King Soopers](https://www.firesidepto.org/grocerystore), [Milk Caps](https://www.firesidepto.org/additionalnocostprograms), [Sponsorships](https://www.firesidepto.org/sponsorships), and [Spirit Wear](https://www.firesidepto.org/spiritwear) pages. King Soopers organization code: NE165. The source states 5¢ per Longmont Dairy cap and lobby collection. Sponsorship inquiries use the published fundraising role address. No sponsorship prices or benefits were invented. The apparel image and shop URL are from the original spirit-wear page.
+
+Sponsor destinations were verified against their official business websites. The existing sponsor artwork remains labeled 2025–2026; no new sponsorship relationship is implied:
+
+- [Old Friends](https://www.oldfriendslouisville.com/contact)
+- [E and L Team](https://laura-shaffer.remax.com/)
+- [The Goddard School of Louisville](https://www.goddardschool.com/schools/co/louisville/louisville)
+- [Got Game Sports](https://gotgamecamp.com/colorado-programs-birthday-parties-and-events/)
+- [MC Homes](https://www.mchomes.co/about)
+- [Ascend Orthodontics](https://www.ascend-orthodontics.com/)
+- [OptiMindHealth](https://www.optimindhealth.com/)
+- [Paul’s Coffee & Tea](https://www.paulscoffeeandtea.com/)
+- [The Louisville Underground](https://www.thelouisvilleunderground.com/)
+- [Art Major Louisville](https://artmajorstudio.com/louisville-colorado/)
+- [The Singing Cook](https://www.singingcookstore.com/)
+- [Relish](https://www.visitrelish.com/)
+
+The event schedule and team roster remain the September import; this pass did not reverify dates or role holders. No placeholder seasonal event or invented flyer was added. Date-range and optional-media behavior is covered using test fixtures only.
+
+### Homepage card exploration
+
+Added Halloween costume sale for October 1–31, 2026 at the user’s request. Hours, location, and purchase details are not yet supplied. Its generated illustrative cover is not actual sale inventory; generation method and final prompt are in `assets/halloween-costume-sale.txt`. The prior note about no sample seasonal event describes the earlier import.
+
+## Team photos — October 7, 2026
+
+Eight photos supplied by the user in “PTO Board Profile Pics”, matched by filename to Natalie Drummond, Ashley Masin, Heather Kistler Kinz, Chloe Fitch, Sivan Kfir, Shelly Shacham, Elinor Mayer-Tzang, and Jessica Robinson. Web-sized JPEG copies are stored in `assets/team/`; original files remain unchanged. Leanne Duhon, Kristen Smetzer, and Jon Mortimer retain initials.

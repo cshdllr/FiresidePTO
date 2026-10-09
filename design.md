@@ -1,95 +1,65 @@
-# Fireside PTO design system
+# Fireside design system
 
-Status: adopted for the light-mode prototype. Earlier dark and exploratory concepts are historical snapshots. This document describes the system; `design.css` is the implementation source, linked by `index.html` and `design-system.html`. Update the reference's embedded CSS/token snapshot when the stylesheet changes. No live school site has been changed.
+A warm editorial identity for a school community: Newsreader headings, clear DM Sans text, ivory paper, white surfaces, and restrained oxblood actions. The supplied school logo stays unchanged. Keep content direct. Elegance comes from proportion, typography, and consistency, not decorative sections or extra copy.
 
-## Principles
+## Sources of truth
 
-- Lead the homepage with the next event. Put past meetings inside Events.
-- Keep the supplied Fireside logo unchanged. Its red and gold supply the brand color; the interface stays neutral.
-- Use type, spacing, and thin dividers to create hierarchy. Avoid decorative shadows and unnecessary cards.
-- Reuse the roles below before adding a token or component-specific override.
+- `design.css`: shared tokens, typography, navigation, controls, and reusable components.
+- `site.css`: page layouts, event cards, program links, sponsor strip, and responsive adaptations.
+- `design-system.html`: live specimens, complete token inventory, and calculated contrast ratios.
+- `design-system.css`: styles specific to the reference page.
+- `scripts/update_design_reference.py`: refreshes the reference’s embedded token values after shared CSS changes. Run `python3 scripts/update_design_reference.py`. The website itself needs no build step.
 
-## Typography: five roles
+## Foundations
 
-Each variable is a complete CSS `font` shorthand, including weight, size, line height, and font family. This avoids separate size, weight, leading, and family tokens for every component. All roles use weight 400.
+There are 22 shared tokens: nine colors, five complete typography roles, seven layout/shape values, and one shared shadow. Do not create typography tokens for individual components.
 
-| Token | Default size / line height | Typeface | Use |
-| --- | --- | --- | --- |
-| `--fr-type-title` | `clamp(2rem, 1.5rem + 2vw, 3rem)` / 1.2 | Georgia, serif | Page title only; 32–48px at a 16px root |
-| `--fr-type-heading` | 1.5rem / 1.2 | Georgia, serif | Section headings, prominent dates, brand name |
-| `--fr-type-item` | 1.25rem / 1.4 | Georgia, serif | Event names and team member names |
-| `--fr-type-body` | 1rem / 1.6 | Arial, sans-serif | Paragraphs, primary buttons, detail content |
-| `--fr-type-meta` | .875rem / 1.4 | Arial, sans-serif | Navigation, labels, metadata, secondary links |
-
-At the browser's default root size, these resolve to 32–48, 24, 20, 16, and 14px. Do not set the root font size to a fixed pixel value. Keep uppercase labels short and use .06em tracking; titles use −.02em tracking. Do not create a smaller caption style. Use semantic heading levels independently of visual roles.
-
-## Colors
-
-| Token | Value | Use |
+| Role | Value | Purpose |
 | --- | --- | --- |
-| `--fr-paper` | `#ffffff` | Page background |
-| `--fr-text` | `#252827` | Headings and primary text |
-| `--fr-muted` | `#666d68` | Supporting text |
-| `--fr-line` | `#e2e6e2` | Decorative separators only |
-| `--fr-wash` | `#f5f7f4` | Event information and photo placeholders |
-| `--fr-solid` | `#29332d` | Primary action fill |
-| `--fr-solid-text` | `#ffffff` | Text on primary actions |
+| Paper | `#faf8f4` | Main background |
+| Surface | `#ffffff` | Cards and sponsor artwork |
+| Wash | `#f0ece5` | Quiet surfaces and default covers |
+| Text | `#282624` | Primary text; inverse feature background |
+| Muted | `#6d655e` | Supporting information |
+| Line | `#e3ddd4` | Subtle boundaries |
+| Solid | `#75372f` | Actions and keyboard focus |
+| Solid text | `#ffffff` | Text on solid actions |
+| Gold | `#ac8b4f` | Decorative arcs and hover borders; not body text |
 
-The two white tokens have different semantic jobs and remain separate. Dormant dark-mode values were removed from this light system. Keep the logo's colors in the supplied asset; do not guess brand hex values from the screenshot.
-
-Source-color contrast ratios: primary text on paper 14.88:1; secondary text on paper 5.31:1; secondary text on wash 4.93:1; primary text on wash 13.81:1; button text on solid 13.08:1. These pairs exceed the [WCAG normal-text minimum of 4.5:1](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html). The divider color is not suitable as the sole essential boundary of a control. These checks are not a full accessibility audit.
-
-## Spacing and layout
-
-Use the small spacing scale **4, 8, 12, 16, 24, 32, 40, 48px**. Do not create a variable for every number. Use semantic variables for the shared responsive dimensions:
-
-| Token | Desktop | At 720px and below |
+| Type role | Font | Size / line height |
 | --- | --- | --- |
-| `--fr-gutter` | 40px | 24px |
-| `--fr-section-space` | 40px | 32px |
-| `--fr-layout-gap` | 48px | 24px |
-| `--fr-content-max` | 1120px | Same maximum; content shrinks to fit |
-| `--fr-reading-max` | 65ch | Same maximum; content shrinks to fit |
-| `--fr-control-min` | 44px | 44px |
-| `--fr-radius` | 3px | 3px |
+| Title | Newsreader 400 | 40–64px fluid / 1.08 |
+| Heading | Newsreader 400 | 32px / 1.15 |
+| Item | Newsreader 500 | 22px / 1.25 |
+| Body | DM Sans 400 | 16px / 1.65 |
+| Metadata | DM Sans 400 | 14px / 1.5 |
 
-Header, main, and footer share the same gutter and maximum width. The maximum includes padding. Structural borders are 1px and selected indicators 2px. No shadows. Keep native focus indicators.
+Sizes assume a 16px root and are expressed in rem. Weight 500 is used for compact actions and selection. Fonts and their SIL Open Font Licenses are in `assets/fonts`; no external font request is needed. Georgia and Arial are fallbacks. Preserve browser text enlargement.
 
-Content-driven breakpoints:
+## Layout and shape
 
-- **960px:** navigation gets its own row so larger labels fit comfortably.
-- **720px:** smaller gutters, single-column hero/detail content, two-column team directory, wrapping event rows.
-- **480px:** single-column team directory and lower homepage sections; logo shrinks from 72px to 56px.
+The site has a 1200px maximum width including 40px side gutters. Sections use 56px spacing, major grids use 48px gaps, and event cards use 24px gaps. At 720px and below, gutters become 24px, section spacing 40px, and major gaps 24px. Body reading width is capped at 62ch. Use the 4px spacing rhythm (4, 8, 12, 16, 20, 24, 32, 40, 48, 56, 72); shared decisions get tokens, every individual gap does not.
 
-The extra header breakpoint is deliberate; forcing it into the content breakpoint would crowd navigation after increasing text size. CSS variables cannot be used directly in standard media-query conditions.
+Surfaces share a 12px corner radius. Compact navigation/controls use 8px. Arrow affordances are circular. Use the shared soft shadow only for interaction, not on every surface. Avoid repeating horizontal rules where spacing already separates groups.
 
-Special geometry is not a spacing token: the logo is 72px (56px on small screens), the event date column is 56px, and team portraits use a 4:3 ratio. Preserve logo proportions with `object-fit: contain`; crop actual portraits with `object-fit: cover`.
+## Components
 
-## Components and interactions
+- **Page headers:** one page title, with an optional useful action aligned alongside it. No eyebrow labels or introductory copy. Dates and program commitments belong in the page content. All site pages use the shared `pageIntro` renderer.
+- **Navigation:** requested order is Events, Volunteer, Fundraising, PTO Team, Resources. Active destination uses a warm surface, oxblood text, and `aria-current`. Text weight stays unchanged so links do not shift when navigating. Donate is a compact solid action. At 960px and below, navigation collapses behind a 44px hamburger button; Donate remains visible beside it, without its arrow. Below 360px, the brand uses the logo alone to leave room for both controls. The menu opens in the page flow, closes on selection or Escape, and resets when the breakpoint changes. The button exposes its expanded state to assistive technology; Escape returns focus to it. Without JavaScript, navigation remains visible. The brand subtitle hides below 480px to keep the header compact.
+- **Actions:** use a solid primary control and colored secondary links. No link underlines. Standalone controls are at least 44px tall. Visible keyboard focus uses a 2px oxblood outline, offset 4px. Links within prose must remain distinguishable by placement and label as well as color.
+- **Event cards:** only the next three ongoing/upcoming events appear on Home. Cards fit the available content width with a 220px minimum and 24px gaps, showing up to three columns. Columns reduce only when the cards no longer fit; a single card can shrink below 220px on very narrow screens. One anchor wraps each entire card, with a clear accessible name. Covers use a compact 2:1 frame. Photos fill the frame; flyers fit without cropping. Missing covers reveal a branded default. White card surfaces use 20px inner padding; the action stays aligned at the bottom. Hover lifts 4px over 180ms, adds the shared shadow, and fills the circular arrow. Reduced motion removes movement and transitions.
+- **Event pages:** preserve the permanent event URL, inclusive end dates, full cover/flyer images, text descriptions, and attached records. Past meetings remain under Events. Other past events also retain their own pages and documents. Never invent minutes.
+- **Spirit wear:** one inverse ink surface shared between Home and Fundraising. Keep merchandise imagery intact and the store link clear.
+- **Volunteer programs:** clickable white surfaces, concise directory descriptions, complete descriptions and optional photos on detail pages. Avoid repeated section intros and horizontal dividers.
+- **Team:** name first, position second. No per-person email addresses. One visible, copyable chair email above the directory. Photos use the existing rounded 4:3 frame with a per-photo focal position. Initial placeholders remain for missing or failed photos. Images are decorative beside each person’s name.
+- **Resources:** simple headings and grouped links; no unnecessary panel borders or explanatory filler. Financial archives use native disclosures.
+- **Fundraising:** consistent sections for shopping rewards, milk caps, sponsorships, and giving. Never invent sponsor pricing or benefits.
+- **Sponsors:** original full-color logos on white, linked to verified destinations. Use “Thank you for supporting Fireside!” with no year label. A 65-second loop continues on hover. Keyboard focus and reduced-motion preferences show a static wrapping list; visual duplicates are hidden from assistive technology and tab order.
 
-- Primary button: body type, solid background, white text, 12px × 24px padding, 3px radius, minimum 44px height. One prominent action per section.
-- Secondary link: metadata type, visible underline, minimum 44px height when standalone. Inline prose links remain inline.
-- Navigation: metadata type, minimum 44px height. Current page uses an underline and `aria-current="page"`.
-- Event filters: metadata type, minimum 44px height. Selected filter uses an underline and `aria-pressed`.
-- Event row: shared date column, item title, metadata, entire row clickable. Internal destinations use →; external destinations use ↗.
-- Team entry: consistent portrait ratio, role label, item title, role-specific contact. Never invent names, photos, or contact addresses.
-- Meeting records: agenda before the event; recap and minutes afterward on the same event page. Past meetings lists those existing pages. Other event types omit meeting-record sections.
-- Disclosure: native `details`/`summary`, at least 44px summary height, visible browser focus.
+## Verification
 
-44px is our internal usability target. [WCAG 2.2 AA target size](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html) uses a 24px minimum with exceptions; 44px is not a claim about that standard. Preserve [visible keyboard focus](https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html).
+The reference computes contrast from the actual embedded tokens for primary text, secondary text, and actions. Normal text pairings should remain at least 4.5:1. Decorative gold and rules are not text or focus indicators. This is not a full accessibility audit.
 
-## Change rules and verification
+After changing the system: regenerate the reference, run `node --test tests/site.test.cjs`, check desktop and mobile layouts, inspect navigation and event/program routes, and verify focus, reduced-motion behavior, and text overflow. Preserve prior content and functionality unless a change is requested.
 
-1. Change shared declarations in `design.css`; update this document and the rendered reference in the same change.
-2. Use a role, not a new size, for a new heading or caption. Do not add component-specific typography tokens.
-3. Check the homepage, Events including Past meetings, PTO Team, and a detail view at desktop and mobile widths.
-4. Before production, verify text enlargement, browser zoom/reflow, keyboard order, focus, real link destinations, and screen-reader semantics.
-
-The content migration adds shareable hash event URLs, browser back/forward integration, and heading focus after navigation. The site remains a static single-page application; production accessibility verification is still required. Navigation and event filters use real links, with `aria-current` indicating the selected destination.
-# Sponsor motion
-
-The homepage sponsor strip uses the shared heading, metadata, spacing, and control styles. Logos retain their original colors on white and fit within a 172 × 100px area without stretching. A 65-second linear loop moves right to left. Hovering over the logos pauses movement. When sponsor links receive keyboard focus, the strip becomes a static wrapping list so every link stays visible. Reduced-motion preferences replace the animation with a wrapping, static list of every sponsor; duplicate logos are hidden from assistive technology.
-
-## Resource and volunteer directories
-
-Resources and volunteering use simple two-column directories that stack below 720px. Headings and spacing separate groups; avoid section rules, repeated eyebrow labels, and introductory copy that restates a heading. Resources retain all document links, with older reports in a native disclosure. Volunteer entries contain a name, commitment, and one concise description, with signup and contact actions at the top. Use existing type and spacing tokens.
+Events has two views: Upcoming events and Past events. Their toggle sits right-aligned in the Events title row and wraps beneath the title on small screens. Past events combines meetings and other events in reverse date order and retains the school-year records archive. Existing `#meetings` links open the combined past view. Past event detail pages return to `#past-events`.
