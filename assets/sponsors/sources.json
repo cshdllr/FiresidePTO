@@ -1,0 +1,222 @@
+{
+  "verified": "2026-10-10",
+  "boundsFormat": "[left, top, width, height] in original image pixels; used only for CSS viewport cropping",
+  "logos": [
+    {
+      "name": "Old Friends",
+      "slug": "old-friends",
+      "file": "assets/sponsors/fireside-poster-original.png",
+      "website": null,
+      "sourcePage": "https://www.firesidepto.org/sponsorships",
+      "sourceAsset": "https://static.wixstatic.com/media/f8a287_6a8913a44359417090a269b4a8da8937~mv2.png",
+      "width": 1248,
+      "height": 702,
+      "bounds": [
+        41,
+        100,
+        130,
+        112
+      ],
+      "status": "poster-fallback",
+      "notes": "Best available artwork is a viewport crop from the original PTO poster. A separate original logo was not found. The former oldfriendslouisville.com domain redirects to unrelated gambling content; its outbound link is disabled until a current destination is verified."
+    },
+    {
+      "name": "E&L Team",
+      "slug": "el-team",
+      "file": "assets/sponsors/el-team.png",
+      "website": "https://eandlteam.com/",
+      "sourcePage": "https://eandlteam.com/",
+      "sourceAsset": "https://media-production.lp-cdn.com/media/3089a615-6f4e-43e0-a3f9-a7214c6ad74d",
+      "width": 1202,
+      "height": 1202,
+      "bounds": [
+        0,
+        0,
+        1202,
+        1202
+      ],
+      "status": "original",
+      "notes": "Exact unedited transparent PNG from official current team header logo, class logo__img dark, alt E&L Team. Visually inspected: olive circular E&L TEAM outline logo. This current official mark omits the RE/MAX Elevate submark in supplied older poster; no generic brand substitution. Official about page confirms Laura Shaffer partnership at https://eandlteam.com/agent/laura-shaffer."
+    },
+    {
+      "name": "The Goddard School",
+      "slug": "goddard-school",
+      "file": "assets/sponsors/goddard-school.svg",
+      "website": "https://www.goddardschool.com/schools/co/louisville/louisville",
+      "sourcePage": "https://www.goddardschool.com/schools/co/louisville/louisville",
+      "sourceAsset": "https://www.goddardschool.com/content/dam/gsi/goddard-school-site.svg",
+      "width": 270,
+      "height": 26,
+      "bounds": [
+        0,
+        0,
+        270,
+        26
+      ],
+      "status": "original",
+      "notes": "Exact unedited official desktop header SVG from Louisville school page. Wide current horizontal logo. Footer alternatively uses white logo at https://www.goddardschool.com/content/dam/gsi/footer/GoddardLogo_White-Web.png; not downloaded. No recoloring or redesign."
+    },
+    {
+      "name": "Got Game Sports",
+      "slug": "got-game",
+      "file": "assets/sponsors/got-game.png",
+      "website": "https://gotgamecamp.com/colorado-programs-birthday-parties-and-events/",
+      "sourcePage": "https://gotgamecamp.com/colorado-programs-birthday-parties-and-events/",
+      "sourceAsset": "https://gotgamecamp.com/wp-content/uploads/2020/08/ggclogo.png",
+      "width": 864,
+      "height": 579,
+      "bounds": [
+        66,
+        51,
+        760,
+        489
+      ],
+      "status": "original",
+      "notes": "Exact unedited transparent original referenced by the official website Organization structured data. Full-color handprint lockup matches the PTO poster."
+    },
+    {
+      "name": "MC Homes",
+      "slug": "mc-homes",
+      "file": "assets/sponsors/mc-homes.webp",
+      "website": "https://www.mchomes.co/",
+      "sourcePage": "https://www.mchomes.co/",
+      "sourceAsset": "https://images.squarespace-cdn.com/content/v1/605128d9820a61397663a428/1616870660694-TNJGLSLI6BDXHZMD4C48/logo.png?format=1500w",
+      "width": 1500,
+      "height": 1807,
+      "bounds": [
+        57,
+        48,
+        1387,
+        1721
+      ],
+      "status": "original",
+      "notes": "Official header logo, blue with transparency. Server delivered WebP bytes; extension matches actual format. Visually verified against sponsor artwork. Original untouched."
+    },
+    {
+      "name": "Ascend Orthodontics",
+      "slug": "ascend-orthodontics",
+      "file": "assets/sponsors/ascend-orthodontics.png",
+      "website": "https://www.ascend-orthodontics.com/",
+      "sourcePage": "https://www.ascend-orthodontics.com/",
+      "sourceAsset": "https://cdn.prod.website-files.com/5ecd98d69cacddcd7313f2c5/6711487c51504ebf148edddd_Ascend%20Logo%20Final%20Full%20White%20Background.png",
+      "width": 1912,
+      "height": 2017,
+      "bounds": [
+        77,
+        81,
+        1764,
+        1893
+      ],
+      "status": "original",
+      "notes": "Official full logo including Orthodontics, white background. Visually verified against sponsor artwork. Original untouched."
+    },
+    {
+      "name": "OptiMindHealth",
+      "slug": "optimindhealth",
+      "file": "assets/sponsors/optimindhealth.png",
+      "website": "https://www.optimindhealth.com/",
+      "sourcePage": "https://www.optimindhealth.com/",
+      "sourceAsset": "https://www.optimindhealth.com/wp-content/uploads/2018/12/OPTIMIND_LOGO_CLEAR.png",
+      "width": 520,
+      "height": 402,
+      "bounds": [
+        11,
+        25,
+        498,
+        345
+      ],
+      "status": "original",
+      "notes": "Official full-color logo referenced by homepage Organization structured data. Transparent center with white outer edge. Visually verified against sponsor artwork. Original untouched."
+    },
+    {
+      "name": "Paul’s Coffee & Tea",
+      "slug": "pauls-coffee",
+      "file": "assets/sponsors/pauls-coffee.png",
+      "website": "https://www.paulscoffeeandtea.com/",
+      "sourcePage": "https://squareup.com/gift/S5ZWPCCYC47RK/order",
+      "sourceAsset": "https://postoffice-production-f.squarecdn.com/images/KDMVOyJ4gol2uxv9O8mqh7aj6Nc9kiRa.png",
+      "width": 640,
+      "height": 400,
+      "bounds": [
+        27,
+        89,
+        599,
+        223
+      ],
+      "status": "original",
+      "notes": "Exact unedited original from gift-card page linked by official paulscoffeeandtea.com site. Green logo on white canvas with vertical website text. Official website header logo was only 250×100 and white, so this sharper business-supplied Square artwork is preferred."
+    },
+    {
+      "name": "The Louisville Underground",
+      "slug": "louisville-underground",
+      "file": "assets/sponsors/louisville-underground.png",
+      "website": "https://www.thelouisvilleunderground.com/",
+      "sourcePage": "https://www.thelouisvilleunderground.com/",
+      "sourceAsset": "https://static.wixstatic.com/media/10cace_4af47ae52dab4629abb1b059a3f6bc05~mv2.png",
+      "width": 6784,
+      "height": 2400,
+      "bounds": [
+        80,
+        82,
+        6636,
+        2300
+      ],
+      "status": "original",
+      "notes": "Exact unedited original header logo. Dark transparent wordmark; verified in browser on light backdrop, matches sponsor poster."
+    },
+    {
+      "name": "Art Major",
+      "slug": "art-major",
+      "file": "assets/sponsors/art-major.png",
+      "website": "https://artmajorstudio.com/louisville-colorado/",
+      "sourcePage": "https://artmajorstudio.com/louisville-colorado/",
+      "sourceAsset": "https://artmajorstudio.com/wp-content/uploads/2024/10/1-Art-Major-Studio-Louisville-Colorado.png",
+      "width": 567,
+      "height": 372,
+      "bounds": [
+        0,
+        0,
+        567,
+        372
+      ],
+      "status": "original",
+      "notes": "Exact unedited original Louisville location logo; matches sponsor poster."
+    },
+    {
+      "name": "The Singing Cook",
+      "slug": "singing-cook",
+      "file": "assets/sponsors/singing-cook.jpg",
+      "website": "https://www.singingcookstore.com/",
+      "sourcePage": "https://www.singingcookstore.com/",
+      "sourceAsset": "https://images.squarespace-cdn.com/content/v1/56e9b8fa7c65e4fe17132fee/1463176483841-B0QUGNWA8OFKHDWCB598/Singing+Cook+Store+front_Bert-01.jpg",
+      "width": 2479,
+      "height": 1058,
+      "bounds": [
+        36,
+        33,
+        2407,
+        992
+      ],
+      "status": "original",
+      "notes": "Exact unedited official header logo. White background, decorative gray border retained, matches sponsor poster."
+    },
+    {
+      "name": "Relish Food Hall / Pickleball",
+      "slug": "relish",
+      "file": "assets/sponsors/relish.png",
+      "website": "https://www.visitrelish.com/",
+      "sourcePage": "https://www.visitrelish.com/",
+      "sourceAsset": "https://images.squarespace-cdn.com/content/v1/63b7320f9d93a219fac64424/967cb562-937f-474f-96c8-02ddbb8696fb/RelishPrimaryMark_Full_NoCircle_Green.png",
+      "width": 1120,
+      "height": 451,
+      "bounds": [
+        0,
+        0,
+        1120,
+        451
+      ],
+      "status": "original",
+      "notes": "Exact unedited official header logo; transparent green artwork matches sponsor poster."
+    }
+  ]
+}

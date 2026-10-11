@@ -26,3 +26,11 @@
  #fireside-refined .ds-palette { grid-template-columns: repeat(3,minmax(0,1fr)); }
  #fireside-refined :is(.ds-component-grid,.ds-type) { grid-template-columns: 1fr; gap: 24px; }
 }
+
+#fireside-refined .ds-motion-copy { margin: 0; max-width: 54ch; }
+#fireside-refined .ds-motion-preview { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 24px; }
+#fireside-refined .ds-motion-preview article { padding: 24px; border-radius: var(--fr-radius); background: var(--fr-surface); }
+#fireside-refined .ds-motion-preview h3 { margin-top: 24px; }
+@media(max-width:480px) {
+  #fireside-refined .ds-motion-preview { grid-template-columns: 1fr; gap: 16px; }
+}

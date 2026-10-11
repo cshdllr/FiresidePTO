@@ -4,7 +4,7 @@ A minimal, light-mode website concept for Fireside Elementary's PTO. Plain HTML,
 
 ## Current status
 
-This is a design preview, not a replacement for the current school website. It includes a featured event, Events with a combined Past events section, event detail views, and a PTO Team directory.
+This is a design preview, not a replacement for the current school website. It includes a three-card event preview on Home, a vertical card list on Events, a combined Past events list, event detail views, and a PTO Team directory.
 
 Public content has been imported from the existing site: meeting records, the full listed team, volunteer committees, budgets, and forms. See `content-sources.md` for coverage and unresolved source conflicts. Before using it as the official site, resolve unconfirmed event dates and contacts and replace photo placeholders. The Donate link opens the donation destination published on the existing homepage. Existing school-domain settings have not been changed.
 
@@ -65,23 +65,30 @@ Check the homepage, Events including Past events, a detail view, and the PTO Tea
 The original logo and school branding are supplied assets; this repository does not assert new ownership or grant a separate license to them.
 # Sponsors
 
-The homepage carousel is maintained in `sponsors.js`. It displays the 12 sponsors from the supplied 2025–2026 artwork in `assets/sponsors-2025-2026.png`, using CSS crops to preserve the original logos. Crop coordinates use a 2016 × 1243 reference size. For future seasons, prefer separate original logo files for sharper results, update the year label, and verify the sponsor roster. Motion and reduced-motion behavior are in `site.css`.
+The homepage carousel is maintained in `sponsors.js`. The roster comes from the supplied 2025–2026 poster; verify sponsorships before a new season. Eleven logos now use separate official originals in `assets/sponsors/`. Old Friends uses a crop from the original PTO poster until a separate logo is available. Asset sources and verification notes are recorded in `assets/sponsors/sources.json`.
 
-Sponsor website URLs are maintained in the `websites` array in `sponsors.js`, in the same order as the logo entries. Duplicate logos stay out of keyboard navigation. The strip continues on hover and shows a static list during keyboard focus or reduced motion.
+Each sponsor entry contains its name, website `url`, local `src`, original image dimensions, and artwork `bounds` as `[left, top, width, height]` in original pixels. The display crops excess whitespace through CSS; original files remain unchanged. Measure visible artwork when replacing a file, including any intentional frame or tagline. A `null` URL displays an unlinked logo. Old Friends currently has no link because its former domain redirects to unrelated content.
+
+Artwork fits within 184 × 88px; exceptionally wide wordmarks can specify `maxWidth` (Goddard uses 264px). The gap between visible artwork is 48px, or 32px below 480px, in a 144px-tall strip. These rules live in `site.css` and `sponsors.js`. The heading has no year label. Duplicate logos stay out of keyboard navigation. The strip continues on hover and shows a static wrapping list during keyboard focus or reduced motion.
 
 ## Events and program pages
 
+- Event `time` includes minutes for both endpoints, including whole hours: `8:00–9:15 am` or `3:00–4:30 pm`. Keep source uncertainty notes intact.
 - Event `date` is the first day; optional `endDate` is the inclusive final day. Both use `YYYY-MM-DD`. A December 1–31 event remains upcoming/ongoing through December 31, then appears under Past events. Leave `endDate` null for a single day. Do not add a seasonal event until its details are confirmed.
 - Optional event `image`: `{ "src": "assets/event-flyer.jpg", "alt": "Description of the flyer" }`. Put the event’s essential information in text too. The homepage and detail page display it without cropping.
 - Attach agendas, minutes, or recap documents through the event’s `documents` array: `{ "label": "Meeting minutes", "url": "https://..." }`. Records stay at the same `#event/id` URL. Completed meetings and other events appear together under Past events. Adding minutes is a manual content update, not an automatic import.
 - Volunteer programs have stable `id` values and `#program/id` pages. Keep the short `description` for the directory, full paragraphs in `body`, and optional `{ "src": "assets/program-photo.jpg", "alt": "Description" }` entries in `photos`.
 - Fundraising links and the spirit-wear image live in `content.js` under `fundraising`. The current merchandise photo is served from the original PTO website and depends on that host remaining available.
-- Run focused rendering checks with `node --test tests/site.test.cjs`. No install or build step is required.
+- Run focused rendering checks with `node --test tests/*.test.cjs`. No install or build step is required.
 
 Event `coverImage` accepts `{ "src": "assets/photo.jpg", "alt": "Description", "caption": "Optional caption" }`. It fills the card cover and appears on the detail page. If no cover is supplied, the card uses `image` (a flyer, shown without cropping), then the Fireside-branded default. Missing image files also reveal the default. Each card is one keyboard-accessible link.
 
 ## Design system maintenance
 
+Open `card-explorations.html` to compare ten card directions, each with a three-event Home preview and a stacked Events list. The gallery uses fixed real event examples so each design shows the same content. Numbered URL fragments such as `#03` link to a direction. Selecting a study does not apply its design to the site.
+
 Shared foundations are in `design.css`; page layouts are in `site.css`. The Newsreader and DM Sans fonts are served from `assets/fonts` with their licenses. After changing tokens, run `python3 scripts/update_design_reference.py` to update the live reference in `design-system.html`. See `design.md` for component, motion, accessibility, and responsive rules. No build step is needed to publish the site.
 
 Team photos live in `assets/team/`. In `content.js`, add an optional `photo` object to a team member, for example `{ "src": "assets/team/name.jpg", "position": "50% 40%" }`. The position adjusts the visible crop in the 4:3 card; missing photos use initials.
+
+Page entrances are handled by `motion.js` using the motion tokens in `design.css`. The design-system page includes a Replay entrance control. Reduced-motion users see content immediately.

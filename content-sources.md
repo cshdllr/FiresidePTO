@@ -48,8 +48,8 @@ Fundraising content follows the live [Fundraising](https://www.firesidepto.org/f
 
 Sponsor destinations were verified against their official business websites. The existing sponsor artwork remains labeled 2025–2026; no new sponsorship relationship is implied:
 
-- [Old Friends](https://www.oldfriendslouisville.com/contact)
-- [E and L Team](https://laura-shaffer.remax.com/)
+- Old Friends — former website link disabled on October 10 after it redirected to unrelated content.
+- [E&L Team](https://eandlteam.com/)
 - [The Goddard School of Louisville](https://www.goddardschool.com/schools/co/louisville/louisville)
 - [Got Game Sports](https://gotgamecamp.com/colorado-programs-birthday-parties-and-events/)
 - [MC Homes](https://www.mchomes.co/about)
@@ -70,3 +70,13 @@ Added Halloween costume sale for October 1–31, 2026 at the user’s request. H
 ## Team photos — October 7, 2026
 
 Eight photos supplied by the user in “PTO Board Profile Pics”, matched by filename to Natalie Drummond, Ashley Masin, Heather Kistler Kinz, Chloe Fitch, Sivan Kfir, Shelly Shacham, Elinor Mayer-Tzang, and Jessica Robinson. Web-sized JPEG copies are stored in `assets/team/`; original files remain unchanged. Leanne Duhon, Kristen Smetzer, and Jon Mortimer retain initials.
+
+The Halloween cover has a 1200×800 WebP derivative for faster page loading. The generated PNG original is retained; the illustration’s content is unchanged.
+
+## Sponsor artwork — October 10, 2026
+
+Replaced eleven screenshot crops with unedited originals from official business websites or their linked business services. Exact source URLs, source dimensions, measured artwork bounds, and verification notes are in [the sponsor source manifest](assets/sponsors/sources.json). E&L Team and Goddard use their current official logo variants. Paul’s uses the sharper green logo supplied on the gift-card page linked from its official site. The roster is unchanged; new artwork does not imply a renewed sponsorship.
+
+Old Friends retains a crop from the sharper original poster on the [PTO Sponsorships page](https://www.firesidepto.org/sponsorships). No separate original was verified. Its former website domain redirects to unrelated gambling content, so the carousel no longer links there. A replacement logo and verified destination can be supplied later.
+
+Excess whitespace is cropped with CSS viewports; downloaded originals remain intact. Sizes and gaps are based on the visible artwork rather than each source file’s canvas.

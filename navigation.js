@@ -44,6 +44,9 @@
     setOpen(false);
     if (compact.matches && focusInNav) toggle.focus();
   });
+  document.addEventListener('focusin', event => {
+    if (compact.matches && !header.contains(event.target)) setOpen(false);
+  });
   window.addEventListener('hashchange', () => setOpen(false));
   compact.addEventListener('change', syncBreakpoint);
   header.classList.add('fr-navigation-ready');

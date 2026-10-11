@@ -274,7 +274,7 @@ window.FIRESIDE_DATA = {
       "date": "2025-08-22",
       "type": "general",
       "title": "Coffee & chat",
-      "time": "7:50am - 8:20am",
+      "time": "7:50–8:20 am",
       "place": "",
       "schoolYear": "2025–26",
       "documents": [],
@@ -289,7 +289,7 @@ window.FIRESIDE_DATA = {
       "date": "2025-09-17",
       "type": "general",
       "title": "PTO general meeting",
-      "time": "5:30pm - 6:45pm",
+      "time": "5:30–6:45 pm",
       "place": "Fireside Elementary",
       "schoolYear": "2025–26",
       "documents": [
@@ -316,7 +316,7 @@ window.FIRESIDE_DATA = {
       "date": "2025-11-21",
       "type": "general",
       "title": "PTO general meeting",
-      "time": "8am - 9:15am",
+      "time": "8:00–9:15 am",
       "place": "Fireside Elementary",
       "schoolYear": "2025–26",
       "documents": [
@@ -343,7 +343,7 @@ window.FIRESIDE_DATA = {
       "date": "2026-01-30",
       "type": "general",
       "title": "PTO general meeting",
-      "time": "8am - 9:15am",
+      "time": "8:00–9:15 am",
       "place": "Fireside Elementary",
       "schoolYear": "2025–26",
       "documents": [
@@ -370,7 +370,7 @@ window.FIRESIDE_DATA = {
       "date": "2026-04-15",
       "type": "general",
       "title": "PTO general meeting",
-      "time": "5:30pm - 6:45pm",
+      "time": "5:30–6:45 pm",
       "place": "Fireside Elementary",
       "schoolYear": "2025–26",
       "documents": [
@@ -397,7 +397,7 @@ window.FIRESIDE_DATA = {
       "date": "2026-05-13",
       "type": "general",
       "title": "Volunteer reception & PTO meeting",
-      "time": "3 pm; source end times differ (4:15 / 4:30 pm).",
+      "time": "3:00 pm; source end times differ (4:15 / 4:30 pm).",
       "place": "Rocky Mountain Tap & Garden",
       "schoolYear": "2025–26",
       "documents": [
@@ -480,7 +480,7 @@ window.FIRESIDE_DATA = {
       "date": "2026-11-20",
       "type": "general",
       "title": "PTO general meeting",
-      "time": "8–9:15 am",
+      "time": "8:00–9:15 am",
       "place": "Fireside Amphitheater",
       "schoolYear": "2026–27",
       "documents": [],
@@ -495,7 +495,7 @@ window.FIRESIDE_DATA = {
       "date": "2027-01-29",
       "type": "general",
       "title": "PTO general meeting",
-      "time": "8–9:15 am",
+      "time": "8:00–9:15 am",
       "place": "Fireside Amphitheater",
       "schoolYear": "2026–27",
       "documents": [],
@@ -543,7 +543,7 @@ window.FIRESIDE_DATA = {
       "date": null,
       "type": "fundraiser",
       "title": "Fireside Fun Run",
-      "time": "12–2:50 pm (published time; confirm)",
+      "time": "12:00–2:50 pm (published time; confirm)",
       "place": "Fireside Elementary",
       "source": "https://www.firesidepto.org/",
       "summary": [
@@ -559,7 +559,7 @@ window.FIRESIDE_DATA = {
       "date": null,
       "type": "general",
       "title": "Volunteer appreciation meeting",
-      "time": "3–4:30 pm",
+      "time": "3:00–4:30 pm",
       "place": "Location to be confirmed",
       "source": "https://www.firesidepto.org/meetingsminutes",
       "summary": [],
@@ -584,7 +584,7 @@ window.FIRESIDE_DATA = {
       "documents": [],
       "image": null,
       "coverImage": {
-        "src": "assets/halloween-costume-sale.png",
+        "src": "assets/halloween-costume-sale.webp",
         "alt": "Illustrative display of children’s Halloween costumes on a rack",
         "caption": "Illustrative image; items shown are examples."
       }

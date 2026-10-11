@@ -1,60 +1,140 @@
-// Crop coordinates reference the supplied sponsor artwork at 2016 × 1243.
-// Replace with individual logo files when original artwork becomes available.
+// Original logo files and measured artwork bounds: [left, top, width, height].
+// Crop in the viewport so original artwork remains intact. See assets/sponsors/sources.json.
 (() => {
-  const websites = [
-  "https://www.oldfriendslouisville.com/",
-  "https://laura-shaffer.remax.com/",
-  "https://www.goddardschool.com/schools/co/louisville/louisville",
-  "https://gotgamecamp.com/colorado-programs-birthday-parties-and-events/",
-  "https://www.mchomes.co/",
-  "https://www.ascend-orthodontics.com/",
-  "https://www.optimindhealth.com/",
-  "https://www.paulscoffeeandtea.com/",
-  "https://www.thelouisvilleunderground.com/",
-  "https://artmajorstudio.com/louisville-colorado/",
-  "https://www.singingcookstore.com/",
-  "https://www.visitrelish.com/"
-];
   const sponsors = [
-    ['Old Friends', 140, 310, 200, 170],
-    ['E&L Team at RE/MAX Elevate', 360, 310, 207, 300],
-    ['The Goddard School', 100, 615, 457, 165],
-    ['Got Game Sports', 600, 310, 775, 495, 'polygon(0 0, 79% 0, 79% 65%, 100% 65%, 100% 85%, 86% 100%, 60% 100%, 60% 91%, 0 91%)'],
-    ['MC Homes', 1265, 310, 230, 270],
-    ['Ascend Orthodontics', 1525, 305, 390, 425],
-    ['OptiMindHealth', 170, 780, 550, 380],
-    ["Paul’s Coffee & Tea", 745, 840, 385, 180],
-    ['The Louisville Underground', 918, 1035, 247, 100],
-    ['Art Major', 1295, 740, 315, 215],
-    ['The Singing Cook', 1630, 810, 290, 120],
-    ['Relish Food Hall / Pickleball', 1270, 975, 455, 190]
-  ].map(([name, x, y, width, height, clip], index) => ({ name, x, y, width, height, clip, url: websites[index] }));
-  // Website order matches the logo list; verified October 7, 2026.
+    {
+      "name": "Old Friends",
+      "url": null,
+      "src": "assets/sponsors/fireside-poster-original.png",
+      "width": 1248,
+      "height": 702,
+      "bounds": [41, 100, 130, 112]
+    },
+    {
+      "name": "E&L Team",
+      "url": "https://eandlteam.com/",
+      "src": "assets/sponsors/el-team.png",
+      "width": 1202,
+      "height": 1202,
+      "bounds": [0, 0, 1202, 1202]
+    },
+    {
+      "name": "The Goddard School",
+      "url": "https://www.goddardschool.com/schools/co/louisville/louisville",
+      "src": "assets/sponsors/goddard-school.svg",
+      "width": 270,
+      "height": 26,
+      "bounds": [0, 0, 270, 26],
+      "maxWidth": 264
+    },
+    {
+      "name": "Got Game Sports",
+      "url": "https://gotgamecamp.com/colorado-programs-birthday-parties-and-events/",
+      "src": "assets/sponsors/got-game.png",
+      "width": 864,
+      "height": 579,
+      "bounds": [66, 51, 760, 489]
+    },
+    {
+      "name": "MC Homes",
+      "url": "https://www.mchomes.co/",
+      "src": "assets/sponsors/mc-homes.webp",
+      "width": 1500,
+      "height": 1807,
+      "bounds": [57, 48, 1387, 1721]
+    },
+    {
+      "name": "Ascend Orthodontics",
+      "url": "https://www.ascend-orthodontics.com/",
+      "src": "assets/sponsors/ascend-orthodontics.png",
+      "width": 1912,
+      "height": 2017,
+      "bounds": [77, 81, 1764, 1893]
+    },
+    {
+      "name": "OptiMindHealth",
+      "url": "https://www.optimindhealth.com/",
+      "src": "assets/sponsors/optimindhealth.png",
+      "width": 520,
+      "height": 402,
+      "bounds": [11, 25, 498, 345]
+    },
+    {
+      "name": "Paul’s Coffee & Tea",
+      "url": "https://www.paulscoffeeandtea.com/",
+      "src": "assets/sponsors/pauls-coffee.png",
+      "width": 640,
+      "height": 400,
+      "bounds": [27, 89, 599, 223]
+    },
+    {
+      "name": "The Louisville Underground",
+      "url": "https://www.thelouisvilleunderground.com/",
+      "src": "assets/sponsors/louisville-underground.png",
+      "width": 6784,
+      "height": 2400,
+      "bounds": [80, 82, 6636, 2300]
+    },
+    {
+      "name": "Art Major",
+      "url": "https://artmajorstudio.com/louisville-colorado/",
+      "src": "assets/sponsors/art-major.png",
+      "width": 567,
+      "height": 372,
+      "bounds": [0, 0, 567, 372]
+    },
+    {
+      "name": "The Singing Cook",
+      "url": "https://www.singingcookstore.com/",
+      "src": "assets/sponsors/singing-cook.jpg",
+      "width": 2479,
+      "height": 1058,
+      "bounds": [36, 33, 2407, 992]
+    },
+    {
+      "name": "Relish Food Hall / Pickleball",
+      "url": "https://www.visitrelish.com/",
+      "src": "assets/sponsors/relish.png",
+      "width": 1120,
+      "height": 451,
+      "bounds": [0, 0, 1120, 451]
+    }
+  ];
   const section = document.createElement('section');
   section.className = 'fr-sponsors';
   section.setAttribute('aria-labelledby', 'fr-sponsor-title');
-  section.innerHTML = '<div class="fr-section-top"><h2 id="fr-sponsor-title">Thank you for supporting Fireside!</h2><a class="fr-inline" href="#fundraising/sponsorship">Become a sponsor →</a></div><div class="fr-sponsor-window"><div class="fr-sponsor-track"></div></div>';
+  section.innerHTML = '<div class="fr-section-top"><h2 id="fr-sponsor-title">Thank you for supporting Fireside!</h2><a class="fr-secondary fr-desktop-section-action" href="#fundraising/sponsorship">Become a sponsor</a></div><div class="fr-sponsor-window"><div class="fr-sponsor-track"></div></div><div class="fr-mobile-section-action"><a class="fr-secondary" href="#fundraising/sponsorship">Become a sponsor</a></div>';
   const group = document.createElement('ul');
   group.className = 'fr-sponsor-group';
-  sponsors.forEach(({name, x, y, width, height, clip, url}) => {
+  sponsors.forEach(({name, url, src, width, height, bounds, maxWidth = 184}) => {
+    const [x, y, cropWidth, cropHeight] = bounds;
+    const scale = Math.min(maxWidth / cropWidth, 88 / cropHeight);
     const item = document.createElement('li');
     const logo = document.createElement('span');
-    const scale = Math.min(172 / width, 100 / height);
     logo.className = 'fr-sponsor-logo';
-    logo.setAttribute('role', 'img');
-    logo.setAttribute('aria-label', name);
     Object.assign(logo.style, {
-      width: `${width * scale}px`, height: `${height * scale}px`,
-      backgroundSize: `${2016 * scale}px ${1243 * scale}px`,
-      backgroundPosition: `${-x * scale}px ${-y * scale}px`,
-      clipPath: clip || 'none'
+      width: `${cropWidth * scale}px`,
+      aspectRatio: `${cropWidth} / ${cropHeight}`
     });
+    const image = document.createElement('img');
+    image.src = src;
+    image.alt = name;
+    image.width = width;
+    image.height = height;
+    image.decoding = 'async';
+    Object.assign(image.style, {
+      width: `${width / cropWidth * 100}%`,
+      height: `${height / cropHeight * 100}%`,
+      left: `${-x / cropWidth * 100}%`,
+      top: `${-y / cropHeight * 100}%`
+    });
+    logo.append(image);
     if (url) {
       const link = document.createElement('a');
       link.className = 'fr-sponsor-link';
       link.href = url;
-      link.target = "_blank";
-      link.rel = "noopener";
+      link.target = '_blank';
+      link.rel = 'noopener';
       link.append(logo);
       item.append(link);
     } else {
