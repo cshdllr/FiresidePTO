@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Homepage font comparison | Fireside PTO</title>
+  <link rel="icon" href="assets/fireside-logo.png">
+  <link rel="stylesheet" href="font-comparison.css">
+</head>
+<body>
+  <header class="comparison-header">
+    <div><a class="back" href="index.html#home">Back to Fireside PTO</a><h1>A different typographic feel</h1><p>Same homepage, sizes, spacing, and colors. Only the font families change.</p></div>
+    <div class="view-controls" role="group" aria-label="Comparison view">
+      <button type="button" data-view="both" aria-pressed="true">Side by side</button>
+      <button type="button" data-view="current" aria-pressed="false">Previous only</button>
+      <button type="button" data-view="system" aria-pressed="false">System only</button>
+    </div>
+  </header>
+  <main class="comparison" data-view="both">
+    <section class="version current"><header class="version-label"><h2>01 · Previous fonts</h2><p>Newsreader headings · DM Sans body</p></header><iframe title="Homepage with previous Newsreader and DM Sans fonts" data-font="current"></iframe></section>
+    <section class="version system"><header class="version-label"><h2>02 · System fonts</h2><p>Georgia headings · System sans-serif body</p></header><iframe title="Homepage with Georgia and system sans-serif fonts" data-font="system"></iframe></section>
+  </main>
+  <footer class="comparison-note">The system sans-serif follows your device: typically San Francisco on Apple devices and Segoe UI on Windows. Georgia gives the headings a familiar, more substantial serif shape. The system font version is now used on the site; the previous fonts are retained here for reference.</footer>
+  <script src="font-comparison.js"></script>
+</body>
+</html>

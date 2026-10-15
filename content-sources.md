@@ -80,3 +80,24 @@ Replaced eleven screenshot crops with unedited originals from official business 
 Old Friends retains a crop from the sharper original poster on the [PTO Sponsorships page](https://www.firesidepto.org/sponsorships). No separate original was verified. Its former website domain redirects to unrelated gambling content, so the carousel no longer links there. A replacement logo and verified destination can be supplied later.
 
 Excess whitespace is cropped with CSS viewports; downloaded originals remain intact. Sizes and gaps are based on the visible artwork rather than each source file’s canvas.
+
+## Spirit wear product strip — October 15, 2026
+
+Three original merchandise photos from the [PTO spirit wear page](https://www.firesidepto.org/spiritwear) are stored locally, unedited, for the shared Home and Fundraising strip. These are product examples; current stock and pricing remain in the linked shop.
+
+- `assets/spirit-wear/sweatshirt.png`: https://static.wixstatic.com/media/f8a287_3aa3f70af23a429da75fc44ff2c772ce~mv2.png
+- `assets/spirit-wear/cap.png`: https://static.wixstatic.com/media/f8a287_8b80783c167d4090b4c1588f94c4f2bc~mv2.png
+- `assets/spirit-wear/t-shirt.png`: https://static.wixstatic.com/media/f8a287_ad1c6c1ff00c43a18027a723d2763494~mv2.png
+
+## Event and minutes audit — October 15, 2026
+
+Re-read the live homepage and Meetings & Minutes page, and downloaded fresh public exports of the 2026–27 index, 2025–26 index, and older archive. Compared linked Google document/file IDs against `content.js`.
+
+- All 32 agenda/minutes links for the 16 documented 2025–26 meetings were already imported; that year's coffee/chat has no documents.
+- Added September 11 and October 9, 2026 board meetings with their newly linked agendas. Both agendas confirm Fireside Elementary, 8:10–9:45 am. The September agenda's link label says 9.12.26, but its body and index date agree on September 11. Neither index entry links minutes yet. No agenda text is presented as a meeting recap.
+- September 16, 2026 general-meeting minutes are still not linked in the source index. The detail page retains its minutes-when-available message. July 30 remains the only 2026–27 entry with linked minutes in this index.
+- Added the homepage's Labor Day Parade, September 7, 2026, 8:00–10:30 am. Its location and documents are not published; none were invented. The year follows the homepage's 2026 event context and matching Monday weekday.
+- All linked document/file destinations in the older archive are represented by the existing 97 labeled links across 21 school-year sections, reaching 2004–05. The export also contains an unlabeled duplicate of the May 2017–18 financial statement; its labeled occurrence is already preserved. Empty archive years remain empty. Older records stay grouped by school year rather than being assigned invented event dates.
+- The site now has 25 dated meeting entries (22 past as of this audit), with minutes attached to 17 and agendas attached to 19. Two dated source community events are past: the parade and movie night. The Fun Run date remains unresolved because the homepage's weekday and calendar date disagree. Existing source conflicts are preserved.
+
+This confirms coverage of the published indexes and homepage listings, not every event ever held at the school. The original site provides no complete historical community-event listing on these pages. Linked minutes remain in their original Google documents; this audit did not copy every document locally or verify access to every legacy file. `eventsVerifiedAt` records this audit separately from the original import date.

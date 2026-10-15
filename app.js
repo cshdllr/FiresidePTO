@@ -14,11 +14,10 @@
   const pastEvents = records.filter(x => x.date && endDate(x) < today).sort((a,b) => b.date.localeCompare(a.date));
   const pending = records.filter(x => !x.date);
   const typeLabel = item => ({general:'PTO general meeting',board:'PTO board meeting',community:'Community event',fundraiser:'Fundraiser'}[item.type]);
-  const source = url => url ? external('Original source', url) : '';
   const row = item => `<a class="fr-event-row" href="#event/${esc(item.id)}"><span class="fr-calendar"><span>${item.date ? parsedDate(item.date).toLocaleDateString('en-US',{month:'short'}).toUpperCase() : 'DATE'}</span>${item.date ? parsedDate(item.date).getDate() : 'TBC'}</span><span class="fr-row-main"><span class="fr-label">${esc(typeLabel(item))}${item.date && endDate(item) < today && item.schoolYear ? ' · '+esc(item.schoolYear) : ''}</span><strong>${esc(item.title)}</strong><span>${esc(item.date ? eventDates(item) : 'Awaiting confirmation')}${item.time ? ' · '+esc(item.time) : ''}</span></span><span class="fr-row-end">${item.date && endDate(item) < today ? (item.documents.length ? 'Records' : 'Details') : 'Details'}</span></a>`;
   const pageIntro = (title, action='') => `<header class="fr-simple-intro fr-title-row"><h1>${esc(title)}</h1>${action}</header>`;
   const eventImage = (item, detail=false) => item.image?.src ? `<a class="fr-flyer-link" href="${detail ? esc(item.image.src) : '#event/'+esc(item.id)}" ${detail ? 'target="_blank" rel="noopener"' : ''}><img class="fr-event-image ${detail ? 'fr-event-image-detail' : ''}" src="${esc(item.image.src)}" alt="${esc(item.image.alt || item.title+' flyer')}" loading="lazy"></a>` : '';
-  const spiritWear = () => `<section class="fr-spirit"><img src="${esc(data.fundraising.spiritWear.image.src)}" alt="${esc(data.fundraising.spiritWear.image.alt)}" loading="lazy"><div><h2>Wear your Fireside pride</h2><p>${esc(data.fundraising.spiritWear.description)}</p><a class="fr-primary" href="${esc(data.fundraising.spiritWear.url)}" target="_blank" rel="noopener">Shop spirit wear</a></div></section>`;
+  const spiritWear = () => `<a class="fr-spirit" href="${esc(data.fundraising.spiritWear.url)}" target="_blank" rel="noopener" aria-label="Shop spirit wear"><div class="fr-spirit-copy"><h2>Wear your Fireside pride</h2><p>${esc(data.fundraising.spiritWear.shortDescription || data.fundraising.spiritWear.description)}</p><span class="fr-primary" aria-hidden="true">Shop spirit wear</span></div><div class="fr-spirit-products">${data.fundraising.spiritWear.images.map(photo=>`<div class="fr-spirit-product"><img src="${esc(photo.src)}" alt="${esc(photo.alt)}" loading="lazy" decoding="async"></div>`).join('')}</div></a>`;
   const cardDates = item => {
     if (!item.date) return '';
     const start=parsedDate(item.date), end=parsedDate(endDate(item));
@@ -71,35 +70,58 @@
     const archived = financials.filter(r=>!current.includes(r));
     document.getElementById('fr-resources').innerHTML = `${pageIntro('Resources')}<div class="fr-resource-grid"><section><h2>Forms</h2>${resourceList(data.resources.filter(r=>r.group==='Forms'))}</section><section><h2>Budgets & reports</h2>${resourceList(current)}<details><summary>Previous years</summary>${resourceList(archived)}</details></section><section><h2>Policies</h2>${resourceList(data.resources.filter(r=>r.group==='Policies'))}</section><section><h2>School & family links</h2>${resourceList(data.familyLinks)}</section></div>`;
   }
+  function programCard(program, path, meta='') {
+    const titleId=`${path}-title-${program.id}`;
+    return `<article><a class="fr-program-link" href="#${path}/${esc(program.id)}" aria-labelledby="${esc(titleId)}"><div><h2 id="${esc(titleId)}">${esc(program.name)}</h2><p>${esc(program.description)}</p></div>${meta ? `<div class="fr-program-card-footer"><span class="fr-commitment">${esc(meta)}</span></div>` : ''}</a></article>`;
+  }
   function buildVolunteer() {
-    document.getElementById('fr-volunteer').innerHTML=`${pageIntro('Volunteer', '<a class="fr-secondary" href="https://bvsd.helpatschools.com/schools/35/events" target="_blank" rel="noopener">View open opportunities</a>')}<section class="fr-committee-section" aria-label="Volunteer committees"><div class="fr-committee-grid">${data.volunteers.map(v=>`<article><a class="fr-program-link" href="#program/${esc(v.id)}" aria-labelledby="program-title-${esc(v.id)}"><div><h2 id="program-title-${esc(v.id)}">${esc(v.name)}</h2><p>${esc(v.description)}</p></div><div class="fr-program-card-footer"><span class="fr-commitment">${esc(v.commitment)}</span><span class="fr-secondary" aria-hidden="true">Learn more</span></div></a></article>`).join('')}</div></section>`;
+    document.getElementById('fr-volunteer').innerHTML=`${pageIntro('Volunteer', '<a class="fr-secondary" href="https://bvsd.helpatschools.com/schools/35/events" target="_blank" rel="noopener">View open opportunities</a>')}<section class="fr-committee-section" aria-label="Volunteer committees"><div class="fr-committee-grid">${data.volunteers.map(v=>programCard(v,'program',v.commitment)).join('')}</div></section>`;
   }
   function showProgram(id) {
     const program = data.volunteers.find(p=>p.id===id);
     if (!program) return false;
-    document.getElementById('fr-program').innerHTML=`<a class="fr-back" href="#volunteer">← Back to volunteering</a>${pageIntro(program.name)}<div class="fr-program-body"><p class="fr-commitment">${esc(program.commitment)}${program.season ? ' · '+esc(program.season) : ''}</p>${(program.photos || []).map(photo=>`<img class="fr-program-photo" src="${esc(photo.src)}" alt="${esc(photo.alt)}" loading="lazy">`).join('')}${program.body.map(p=>`<p>${esc(p)}</p>`).join('')}<div class="fr-links"><a class="fr-secondary" href="https://bvsd.helpatschools.com/schools/35/events" target="_blank" rel="noopener">View open opportunities</a></div></div>`;
+    document.getElementById('fr-program').innerHTML=`<a class="fr-back" href="#volunteer">← Back to volunteering</a>${pageIntro(program.name)}<div class="fr-program-body"><p class="fr-commitment">${esc(program.commitment)}${program.season ? ' · '+esc(program.season) : ''}</p>${(program.photos || []).map(photo=>`<img class="fr-program-photo" src="${esc(photo.src)}" alt="${esc(photo.alt)}" loading="lazy">`).join('')}${program.body.map(p=>`<p>${esc(p)}</p>`).join('')}<div class="fr-links"><a class="fr-secondary" href="mailto:chairfiresidepto@gmail.com?subject=${esc(encodeURIComponent(program.name))}">Contact PTO</a></div></div>`;
     return true;
   }
-  function buildFundraising() {
+  function fundraisingPrograms() {
     const f=data.fundraising;
-    document.getElementById('fr-fundraising').innerHTML=`${pageIntro('Fundraising')}${spiritWear()}
-      <div class="fr-fundraising-grid">
-        <section><div><h2>King Soopers rewards</h2><p>Support Fireside when you shop, at no extra cost to you.</p><ol><li>Sign in to your King Soopers account.</li><li>Go to My Account → Community Rewards.</li><li>Search for Fireside PTO or use code <strong>${esc(f.kingSoopers.code)}</strong>.</li><li>Use your linked phone number when you shop.</li></ol></div><div class="fr-card-actions"><a class="fr-secondary" href="${esc(f.kingSoopers.url)}" target="_blank" rel="noopener">Link your account</a></div></section>
-        <section><div><h2>Milk Caps for Moola</h2><p>Save and rinse your Longmont Dairy milk caps, then drop them in the collection box in the school lobby. Fireside receives 5¢ for each cap redeemed.</p></div><div class="fr-card-actions"><a class="fr-secondary" href="${esc(f.milkCapsSource)}" target="_blank" rel="noopener">Program details</a></div></section>
-        <section id="fr-sponsorship"><div><h2>Become a sponsor</h2><p>Local businesses can support Fireside through PTO sponsorships. Contact our fundraising team to learn about the available levels and opportunities.</p></div><div class="fr-card-actions"><a class="fr-secondary" href="mailto:${esc(f.sponsorshipEmail)}?subject=Interested%20in%20sponsorship">Contact fundraising</a></div></section>
-        <section><div><h2>Give to Fireside</h2><p>The annual Fun Run and family donations help fund classroom allocations, para-educator support, and student events.</p></div><div class="fr-card-actions"><a class="fr-secondary" href="${esc(data.donateUrl)}" target="_blank" rel="noopener">Donate</a><a class="fr-secondary" href="#events">Fundraising events</a></div></section>
-      </div>`;
+    return [
+      {id:'king-soopers',name:'King Soopers rewards',description:'Support Fireside when you shop, at no extra cost to you.',
+        body:`<p>Link your King Soopers account to Fireside PTO through Community Rewards. Then use your linked phone number when you shop to support the school.</p><h2>How to get started</h2><ol><li>Sign in to your King Soopers account.</li><li>Go to My Account → Community Rewards.</li><li>Search for Fireside PTO or use code <strong>${esc(f.kingSoopers.code)}</strong>.</li><li>Use your linked phone number when you shop.</li></ol>`,
+        actions:[{label:'Link your account',url:f.kingSoopers.url}]},
+      {id:'milk-caps',name:'Milk Caps for Moola',description:'Turn your Longmont Dairy milk caps into support for Fireside.',
+        body:'<p>Fireside receives 5¢ for each Longmont Dairy milk cap redeemed through Milk Caps for Moola.</p><h2>How to take part</h2><ol><li>Save your Longmont Dairy milk caps.</li><li>Rinse the caps before collecting them.</li><li>Drop them in the collection box in the school lobby.</li></ol>',
+        actions:[]},
+      {id:'sponsorship',name:'Become a sponsor',description:'Connect your business with the Fireside community and support our school.',
+        body:'<p>Local businesses can support Fireside through PTO sponsorships. Contact our fundraising team to learn about the available levels and opportunities.</p><h2>Start a conversation</h2><p>Email the fundraising team with your business name and interest in sponsoring Fireside. The team can help you find an opportunity that fits.</p>',
+        actions:[{label:'Contact fundraising',url:`mailto:${f.sponsorshipEmail}?subject=Interested%20in%20sponsorship`}]},
+      {id:'giving',name:'Give to Fireside',description:'Help fund classroom support and student experiences through a donation.',
+        body:'<p>The annual Fun Run and family donations help fund classroom allocations, para-educator support, and student events.</p><h2>Ways to give</h2><p>Make a donation online, or visit Events to learn about upcoming fundraising activities and how to participate.</p>',
+        actions:[{label:'Donate',url:data.donateUrl},{label:'Fundraising events',url:'#events'}]}
+    ];
+  }
+  function buildFundraising() {
+    document.getElementById('fr-fundraising').innerHTML=`${pageIntro('Fundraising')}${spiritWear()}<section class="fr-fundraising-grid" aria-label="Fundraising programs">${fundraisingPrograms().map(p=>programCard(p,'fundraising')).join('')}</section>`;
+  }
+  function showFundraisingProgram(id) {
+    const program=fundraisingPrograms().find(p=>p.id===id);
+    if(!program) return false;
+    document.getElementById('fr-fundraising-detail').innerHTML=`<a class="fr-back" href="#fundraising">← Back to fundraising</a>${pageIntro(program.name)}<div class="fr-program-body">${program.body}${program.actions.length ? `<div class="fr-links">${program.actions.map(a=>`<a class="fr-secondary" href="${esc(a.url)}"${a.url.startsWith('https:') ? ' target="_blank" rel="noopener"' : ''}>${esc(a.label)}</a>`).join('')}</div>` : ''}</div>`;
+    return true;
   }
   function showEvent(id) {
     const item=records.find(x=>x.id===id);
     if(!item) return false;
     const isPast=item.date && endDate(item)<today;
     const meeting=['general','board'].includes(item.type);
+    const hasMinutes = item.documents.some(document => /minutes/i.test(document.label));
+    const minutesPlaceholder = meeting && !hasMinutes
+      ? `<p>${isPast ? 'Meeting minutes will be added when available.' : 'Meeting minutes will be added after the meeting.'}</p>` : '';
     const detail=document.getElementById('fr-detail');
-    detail.innerHTML=`<a class="fr-back" href="#${isPast ? 'past-events' : 'events'}">← Back to ${isPast ? 'past events' : 'events'}</a>${pageIntro(item.title)}<div class="fr-detail-grid"><div>${item.coverImage?.src ? `<figure class="fr-detail-cover"><img src="${esc(item.coverImage.src)}" alt="${esc(item.coverImage.alt || item.title)}">${item.coverImage.caption ? `<figcaption>${esc(item.coverImage.caption)}</figcaption>` : ''}</figure>` : ''}${eventImage(item,true)}${item.summary.length ? `<section><h2>${isPast ? (meeting ? 'Meeting recap' : 'Event recap') : 'About this event'}</h2>${item.summary.map(s=>`<p>${esc(s)}</p>`).join('')}${isPast && meeting ? '<p class="fr-note">Editorial summary of the source minutes. See the original record below.</p>' : ''}</section>` : ''}${meeting || isPast || item.documents.length ? `<section><h2>${meeting ? 'Agenda & meeting records' : 'Event documents & minutes'}</h2>${item.documents.length ? `<div class="fr-links">${item.documents.map(d=>external(d.label,d.url)).join('')}</div>` : `<p>${isPast ? (meeting ? 'Minutes have not been linked for this meeting yet.' : 'No documents or minutes have been attached to this event yet.') : 'An agenda or minutes document has not yet been linked for this meeting.'}</p>`}</section>` : ''}${item.type==='fundraiser' ? `<div class="fr-links">${external('Donate to Fireside',data.donateUrl)}<a class="fr-inline" href="#volunteer">Volunteer →</a></div>` : ''}${item.note ? `<p class="fr-status">${esc(item.note)}</p>` : ''}${source(item.source)}</div><aside class="fr-info"><dl><dt>WHEN</dt><dd>${esc(eventDates(item))}${item.time ? '<br>'+esc(item.time) : '<br>Time to be confirmed'}</dd><dt>WHERE</dt><dd>${esc(item.place || 'Location to be confirmed')}</dd></dl></aside></div>`;
+    detail.innerHTML=`<a class="fr-back" href="#${isPast ? 'past-events' : 'events'}">← Back to ${isPast ? 'past events' : 'events'}</a>${pageIntro(item.title)}<div class="fr-detail-grid"><div>${item.coverImage?.src ? `<figure class="fr-detail-cover"><img src="${esc(item.coverImage.src)}" alt="${esc(item.coverImage.alt || item.title)}">${item.coverImage.caption ? `<figcaption>${esc(item.coverImage.caption)}</figcaption>` : ''}</figure>` : ''}${eventImage(item,true)}${item.summary.length ? `<section><h2>${isPast ? (meeting ? 'Meeting recap' : 'Event recap') : 'About this event'}</h2>${item.summary.map(s=>`<p>${esc(s)}</p>`).join('')}${isPast && meeting && hasMinutes ? '<p class="fr-note">Summary of the meeting minutes linked below.</p>' : ''}</section>` : ''}${meeting || isPast || item.documents.length ? `<section><h2>${meeting ? 'Meeting minutes & documents' : 'Event documents'}</h2>${item.documents.length ? `<div class="fr-links">${item.documents.map(d=>external(d.label,d.url)).join('')}</div>` : (meeting ? '' : '<p>No documents have been attached to this event yet.</p>')}${minutesPlaceholder}</section>` : ''}${item.type==='fundraiser' ? `<div class="fr-links">${external('Donate to Fireside',data.donateUrl)}<a class="fr-inline" href="#volunteer">Volunteer →</a></div>` : ''}${item.note ? `<p class="fr-status">${esc(item.note)}</p>` : ''}</div><aside class="fr-info"><dl><dt>When</dt><dd>${esc(eventDates(item))}${item.time ? '<br>'+esc(item.time) : '<br>Time to be confirmed'}</dd><dt>Where</dt><dd>${esc(item.place || 'Location to be confirmed')}</dd></dl></aside></div>`;
     return true;
   }
-  const pageIds=['fr-home','fr-events-page','fr-team','fr-resources','fr-volunteer','fr-detail','fr-program','fr-fundraising'];
+  const pageIds=['fr-home','fr-events-page','fr-team','fr-resources','fr-volunteer','fr-detail','fr-program','fr-fundraising','fr-fundraising-detail'];
   let previousPage;
   function route(focus=false) {
     let route;try {route=decodeURIComponent(location.hash.slice(1)) || 'home';} catch {route='home';}
@@ -110,15 +132,15 @@
     else if(route==='team'){page='fr-team';nav='team';}
     else if(route==='resources'){page='fr-resources';nav='resources';}
     else if(route==='volunteer'){page='fr-volunteer';nav='volunteer';}
-    else if(route==='fundraising'||route==='fundraising/sponsorship'){page='fr-fundraising';nav='fundraising';}
+    else if(route==='fundraising'){page='fr-fundraising';nav='fundraising';}
+    else if(route.startsWith('fundraising/') && showFundraisingProgram(route.slice(12))){page='fr-fundraising-detail';nav='fundraising';}
     else if(route.startsWith('program/') && showProgram(route.slice(8))){page='fr-program';nav='volunteer';}
     else if(route.startsWith('event/') && showEvent(route.slice(6))){page='fr-detail';nav='events';}
     const main=document.getElementById(page);main.hidden=false;
     const active=root.querySelector(`nav a[href="#${nav}"]`);if(active)active.setAttribute('aria-current','page');
-    if(route==='fundraising/sponsorship') requestAnimationFrame(()=>document.getElementById('fr-sponsorship').scrollIntoView({block:'start'}));
     const heading=main.querySelector('h1');document.title=(heading?.textContent || 'Home')+' | Fireside PTO';
     if(focus && heading){heading.tabIndex=-1;heading.focus({preventScroll:true});window.scrollTo(0,0);}
-    if (previousPage !== page || ['fr-detail','fr-program','fr-events-page'].includes(page)) {
+    if (previousPage !== page || ['fr-detail','fr-program','fr-fundraising-detail','fr-events-page'].includes(page)) {
       window.FiresideMotion?.enter(main, { contentOnly: previousPage === page && page === 'fr-events-page' });
     } else {
       window.FiresideMotion?.cancel();

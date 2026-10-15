@@ -519,6 +519,46 @@ window.FIRESIDE_DATA = {
       "note": "Pizza and free babysitting provided. Arrive 15 minutes early to mingle.",
       "endDate": null,
       "image": null
+    },
+    {
+      "id": "2026-09-11-board",
+      "date": "2026-09-11",
+      "type": "board",
+      "title": "PTO board meeting",
+      "time": "8:10–9:45 am",
+      "place": "Fireside Elementary",
+      "schoolYear": "2026–27",
+      "documents": [
+        {
+          "label": "Agenda",
+          "url": "https://docs.google.com/document/d/1ggNFEAHbATapr56nw0K2eRKEa0DYEwQZ_yrUzZtyrPg/edit?usp=sharing"
+        }
+      ],
+      "source": "https://docs.google.com/document/d/1ITR581MbFxG0RLNDTQe8dMXvhlLCw5XEtr2dtHO8odc/edit",
+      "summary": [],
+      "note": "",
+      "endDate": null,
+      "image": null
+    },
+    {
+      "id": "2026-10-09-board",
+      "date": "2026-10-09",
+      "type": "board",
+      "title": "PTO board meeting",
+      "time": "8:10–9:45 am",
+      "place": "Fireside Elementary",
+      "schoolYear": "2026–27",
+      "documents": [
+        {
+          "label": "Agenda",
+          "url": "https://docs.google.com/document/d/12_jHDUcgO2SvJ_KFnchJgYKAPCA0oRZFogX7S3u6l6A/edit?usp=sharing"
+        }
+      ],
+      "source": "https://docs.google.com/document/d/1ITR581MbFxG0RLNDTQe8dMXvhlLCw5XEtr2dtHO8odc/edit",
+      "summary": [],
+      "note": "",
+      "endDate": null,
+      "image": null
     }
   ],
   "events": [
@@ -588,6 +628,20 @@ window.FIRESIDE_DATA = {
         "alt": "Illustrative display of children’s Halloween costumes on a rack",
         "caption": "Illustrative image; items shown are examples."
       }
+    },
+    {
+      "id": "2026-labor-day-parade",
+      "date": "2026-09-07",
+      "type": "community",
+      "title": "Labor Day Parade",
+      "time": "8:00–10:30 am",
+      "place": "",
+      "source": "https://www.firesidepto.org/",
+      "summary": [],
+      "documents": [],
+      "note": "",
+      "endDate": null,
+      "image": null
     }
   ],
   "archives": [
@@ -1259,7 +1313,10 @@ window.FIRESIDE_DATA = {
   "team": [
     {
       "name": "Natalie Drummond",
-      "photo": { "src": "assets/team/natalie-drummond.jpg", "position": "50% 42%" },
+      "photo": {
+        "src": "assets/team/natalie-drummond.jpg",
+        "position": "50% 42%"
+      },
       "role": "President",
       "email": "chairfiresidepto@gmail.com"
     },
@@ -1270,25 +1327,37 @@ window.FIRESIDE_DATA = {
     },
     {
       "name": "Ashley Masin",
-      "photo": { "src": "assets/team/ashley-masin.jpg", "position": "50% 50%" },
+      "photo": {
+        "src": "assets/team/ashley-masin.jpg",
+        "position": "50% 50%"
+      },
       "role": "Fundraising Co-Chair",
       "email": null
     },
     {
       "name": "Heather Kistler Kinz",
-      "photo": { "src": "assets/team/heather-kistler-kinz.jpg", "position": "50% 50%" },
+      "photo": {
+        "src": "assets/team/heather-kistler-kinz.jpg",
+        "position": "50% 50%"
+      },
       "role": "Secretary",
       "email": "SecretaryFiresidePTO@gmail.com"
     },
     {
       "name": "Chloe Fitch",
-      "photo": { "src": "assets/team/chloe-fitch.jpg", "position": "50% 50%" },
+      "photo": {
+        "src": "assets/team/chloe-fitch.jpg",
+        "position": "50% 50%"
+      },
       "role": "Programs Co-Chair",
       "email": "ProgramsFiresidePTO@gmail.com"
     },
     {
       "name": "Sivan Kfir",
-      "photo": { "src": "assets/team/sivan-kfir.jpg", "position": "50% 50%" },
+      "photo": {
+        "src": "assets/team/sivan-kfir.jpg",
+        "position": "50% 50%"
+      },
       "role": "Programs Co-Chair",
       "email": "ProgramsFiresidePTO@gmail.com"
     },
@@ -1299,13 +1368,19 @@ window.FIRESIDE_DATA = {
     },
     {
       "name": "Shelly Shacham",
-      "photo": { "src": "assets/team/shelly-shacham.jpg", "position": "50% 42%" },
+      "photo": {
+        "src": "assets/team/shelly-shacham.jpg",
+        "position": "50% 42%"
+      },
       "role": "Communications Co-Chair",
       "email": "CommFiresidePTO@gmail.com"
     },
     {
       "name": "Elinor Mayer-Tzang",
-      "photo": { "src": "assets/team/elinor-mayer-tzang.jpg", "position": "50% 50%" },
+      "photo": {
+        "src": "assets/team/elinor-mayer-tzang.jpg",
+        "position": "50% 50%"
+      },
       "role": "Communications Co-Chair",
       "email": "CommFiresidePTO@gmail.com"
     },
@@ -1316,7 +1391,10 @@ window.FIRESIDE_DATA = {
     },
     {
       "name": "Jessica Robinson",
-      "photo": { "src": "assets/team/jessica-robinson.jpg", "position": "50% 40%" },
+      "photo": {
+        "src": "assets/team/jessica-robinson.jpg",
+        "position": "50% 40%"
+      },
       "role": "Bookkeeper · non-board role",
       "email": null
     }
@@ -1459,10 +1537,21 @@ window.FIRESIDE_DATA = {
       "url": "https://firesidemerch.square.site/",
       "source": "https://www.firesidepto.org/spiritwear",
       "description": "Fireside Falcons apparel for kids and adults, from local vendor 52Native.",
-      "image": {
-        "src": "https://static.wixstatic.com/media/f8a287_3aa3f70af23a429da75fc44ff2c772ce~mv2.png",
-        "alt": "Fireside spirit wear featured by the PTO"
-      }
+      "shortDescription": "Falcons apparel for kids and adults.",
+      "images": [
+        {
+          "src": "assets/spirit-wear/sweatshirt.png",
+          "alt": "Red Fireside Falcons sweatshirt"
+        },
+        {
+          "src": "assets/spirit-wear/cap.png",
+          "alt": "Black Fireside Falcons cap"
+        },
+        {
+          "src": "assets/spirit-wear/t-shirt.png",
+          "alt": "Gray Fireside Falcons T-shirt"
+        }
+      ]
     },
     "sponsorshipEmail": "fundraisefiresidepto@gmail.com",
     "sponsorshipSource": "https://www.firesidepto.org/sponsorships",
@@ -1472,5 +1561,6 @@ window.FIRESIDE_DATA = {
       "source": "https://www.firesidepto.org/grocerystore"
     },
     "milkCapsSource": "https://www.firesidepto.org/additionalnocostprograms"
-  }
+  },
+  "eventsVerifiedAt": "2026-10-15"
 };

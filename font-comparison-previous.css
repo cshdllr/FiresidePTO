@@ -1,0 +1,47 @@
+/* Previous fonts, used only by the comparison page. */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(assets/fonts/dm-sans-400.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(assets/fonts/dm-sans-500.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(assets/fonts/dm-sans-600.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(assets/fonts/newsreader-400.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(assets/fonts/newsreader-500.ttf) format('truetype');
+}
+
+#fireside-refined {
+  --fr-type-title: 400 2.5rem/2.75rem "Newsreader", Georgia, serif;
+  --fr-type-heading: 400 1.5rem/2rem "Newsreader", Georgia, serif;
+  --fr-type-item: 500 1.125rem/1.5rem "Newsreader", Georgia, serif;
+  --fr-type-body: 400 1rem/1.65 "DM Sans", Arial, sans-serif;
+  --fr-type-meta: 400 .875rem/1.5 "DM Sans", Arial, sans-serif;
+}
+@media(max-width:720px) {
+#fireside-refined { --fr-type-title: 400 2rem/2.25rem "Newsreader", Georgia, serif; --fr-type-heading: 400 1.375rem/1.75rem "Newsreader", Georgia, serif; }
+}

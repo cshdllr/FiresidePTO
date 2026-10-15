@@ -87,7 +87,7 @@ Event `coverImage` accepts `{ "src": "assets/photo.jpg", "alt": "Description", "
 
 Open `card-explorations.html` to compare ten card directions, each with a three-event Home preview and a stacked Events list. The gallery uses fixed real event examples so each design shows the same content. Numbered URL fragments such as `#03` link to a direction. Selecting a study does not apply its design to the site.
 
-Shared foundations are in `design.css`; page layouts are in `site.css`. The Newsreader and DM Sans fonts are served from `assets/fonts` with their licenses. After changing tokens, run `python3 scripts/update_design_reference.py` to update the live reference in `design-system.html`. See `design.md` for component, motion, accessibility, and responsive rules. No build step is needed to publish the site.
+Shared foundations are in `design.css`; page layouts are in `site.css`. The site uses Georgia headings and a system sans-serif stack, without font downloads. Previous font assets are retained only for the comparison page. After changing tokens, run `python3 scripts/update_design_reference.py` to update the live reference in `design-system.html`. See `design.md` for component, motion, accessibility, and responsive rules. No build step is needed to publish the site.
 
 Team photos live in `assets/team/`. In `content.js`, add an optional `photo` object to a team member, for example `{ "src": "assets/team/name.jpg", "position": "50% 40%" }`. The position adjusts the visible crop in the 4:3 card; missing photos use initials.
 

@@ -1,39 +1,3 @@
-@font-face {
-  font-family: 'DM Sans';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(assets/fonts/dm-sans-400.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'DM Sans';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url(assets/fonts/dm-sans-500.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'DM Sans';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url(assets/fonts/dm-sans-600.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Newsreader';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(assets/fonts/newsreader-400.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Newsreader';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url(assets/fonts/newsreader-500.ttf) format('truetype');
-}
-
 /* Fireside — shared foundations and components. See design.md. */
 #fireside-refined {
   color-scheme: light;
@@ -53,11 +17,11 @@
   --fr-motion-ease: cubic-bezier(.22, 1, .36, 1);
 
   /* Five complete type roles; no per-component font-size tokens. */
-  --fr-type-title: 400 2.5rem/2.75rem "Newsreader", Georgia, serif;
-  --fr-type-heading: 400 1.5rem/2rem "Newsreader", Georgia, serif;
-  --fr-type-item: 500 1.125rem/1.5rem "Newsreader", Georgia, serif;
-  --fr-type-body: 400 1rem/1.65 "DM Sans", Arial, sans-serif;
-  --fr-type-meta: 400 .875rem/1.5 "DM Sans", Arial, sans-serif;
+  --fr-type-title: 400 2.5rem/2.75rem Georgia, "Times New Roman", serif;
+  --fr-type-heading: 400 1.5rem/2rem Georgia, "Times New Roman", serif;
+  --fr-type-item: 500 1.125rem/1.5rem Georgia, "Times New Roman", serif;
+  --fr-type-body: 400 1rem/1.65 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --fr-type-meta: 400 .875rem/1.5 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 
   --fr-gutter: 40px;
   --fr-section-space: 56px;
@@ -67,6 +31,10 @@
   --fr-control-min: 44px;
   --fr-radius: 12px;
 
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
   background: var(--fr-paper);
   color: var(--fr-text);
   font: var(--fr-type-body);
@@ -87,7 +55,9 @@
 #fireside-refined h2 { letter-spacing: -.01em; font: var(--fr-type-heading); }
 #fireside-refined h3 { font: var(--fr-type-item); }
 #fireside-refined p { color: var(--fr-muted); margin: 16px 0 24px; max-width: var(--fr-reading-max); }
-#fireside-refined :is(.fr-header,main,footer) { max-width: var(--fr-content-max); margin-inline: auto; padding-inline: var(--fr-gutter); }
+#fireside-refined :is(.fr-header,main,footer) { width: 100%; max-width: var(--fr-content-max); margin-inline: auto; padding-inline: var(--fr-gutter); }
+#fireside-refined > main { flex: 1; }
+#fireside-refined > :is(.fr-header,footer) { flex-shrink: 0; }
 #fireside-refined .fr-header { padding-block: 20px; border-bottom: 1px solid var(--fr-line); display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
 #fireside-refined .fr-brand { display: flex; align-items: center; gap: 16px; min-width: 0; }
 #fireside-refined .fr-brand img { display: block; width: 56px; height: 56px; object-fit: contain; flex-shrink: 0; }
@@ -166,7 +136,7 @@
   to { opacity: 1; transform: none; }
 }
 @media(max-width:720px) {
-  #fireside-refined { --fr-type-title: 400 2rem/2.25rem "Newsreader", Georgia, serif; --fr-type-heading: 400 1.375rem/1.75rem "Newsreader", Georgia, serif; --fr-gutter:24px; --fr-section-space:40px; --fr-layout-gap:24px; }
+  #fireside-refined { --fr-type-title: 400 2rem/2.25rem Georgia, "Times New Roman", serif; --fr-type-heading: 400 1.375rem/1.75rem Georgia, "Times New Roman", serif; --fr-gutter:24px; --fr-section-space:40px; --fr-layout-gap:24px; }
   #fireside-refined :is(.fr-hero-grid,.fr-detail-grid) { grid-template-columns:1fr; }
   #fireside-refined .fr-team-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
   #fireside-refined .fr-event-row { flex-wrap:wrap; gap:16px; }

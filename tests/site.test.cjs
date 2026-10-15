@@ -39,7 +39,10 @@ test('all nine programs route to original descriptions and support photos',()=>{
    assert.ok(p.body.length && p.body.join('').length>100);
    const nodes=render('#program/'+p.id);
    assert.equal(nodes.get('fr-program').hidden,false);
-   assert.match(nodes.get('fr-program').innerHTML,/View open opportunities/);
+   const html=nodes.get('fr-program').innerHTML;
+   assert.match(html,/>Contact PTO<\/a>/);
+   assert.ok(html.includes('mailto:chairfiresidepto@gmail.com?subject='+encodeURIComponent(p.name)));
+   assert.doesNotMatch(html,/View open opportunities/);
  }
  const n=render('#program/ambassador-program','2026-12-15',d=>d.volunteers[0].photos=[{src:'assets/test.jpg',alt:'Garden volunteers'}]);
  assert.match(n.get('fr-program').innerHTML,/Garden volunteers/);
@@ -50,8 +53,39 @@ test('team has one shared contact, no individual contact addresses',()=>{
  assert.match(html,/mailto:chairfiresidepto@gmail.com/);
  assert.doesNotMatch(html,/fr-email|Contact the PTO for an introduction/);
 });
-test('fundraising and sponsorship route and retain verified program details',()=>{
- const n=render('#fundraising/sponsorship');assert.equal(n.get('fr-fundraising').hidden,false);
- assert.match(n.get('fr-fundraising').innerHTML,/NE165/);
- assert.match(n.get('fr-fundraising').innerHTML,/firesidemerch.square.site/);
+test('fundraising cards open detail pages and keep instructions off the directory',()=>{
+ const directory=render('#fundraising').get('fr-fundraising');
+ assert.equal(directory.hidden,false);
+ assert.match(directory.innerHTML,/firesidemerch.square.site/);
+ assert.doesNotMatch(directory.innerHTML,/NE165|Link your account|Contact fundraising/);
+ for(const id of ['king-soopers','milk-caps','sponsorship','giving']) {
+   assert.ok(directory.innerHTML.includes(`href="#fundraising/${id}"`));
+   const nodes=render('#fundraising/'+id);
+   assert.equal(nodes.get('fr-fundraising').hidden,true);
+   assert.equal(nodes.get('fr-fundraising-detail').hidden,false);
+   assert.match(nodes.get('fr-fundraising-detail').innerHTML,/Back to fundraising/);
+ }
+ const detail=id=>render('#fundraising/'+id).get('fr-fundraising-detail').innerHTML;
+ assert.match(detail('king-soopers'),/NE165/);
+ assert.match(detail('king-soopers'),/https:\/\/www.kingsoopers.com/);
+ assert.match(detail('milk-caps'),/5¢/);
+ assert.match(detail('milk-caps'),/school lobby/);
+ assert.match(detail('sponsorship'),/mailto:fundraisefiresidepto@gmail.com/);
+ assert.match(detail('giving'),/href="#events"/);
+ assert.match(detail('giving'),/donorsupport.co/);
+ assert.equal(render('#fundraising/unknown').get('fr-home').hidden,false);
+});
+test('meeting minutes stay attached; placeholders cover upcoming and unposted past records',()=>{
+ const meeting={...seasonal,id:'minutes-test',type:'general',date:'2026-12-20',endDate:null,source:'https://example.com/original',documents:[]};
+ const page=(day,documents=[])=>render('#event/minutes-test',day,d=>d.meetings.push({...meeting,documents})).get('fr-detail').innerHTML;
+ const upcoming=page('2026-12-15');
+ assert.match(upcoming,/Meeting minutes will be added after the meeting/);
+ assert.match(upcoming,/<dt>When<\/dt>/);assert.match(upcoming,/<dt>Where<\/dt>/);
+ assert.doesNotMatch(upcoming,/Original source|example.com\/original/);
+ assert.match(page('2026-12-21'),/Meeting minutes will be added when available/);
+ const agendaOnly=page('2026-12-15',[{label:'Agenda',url:'https://example.com/agenda'}]);
+ assert.match(agendaOnly,/example.com\/agenda/);assert.match(agendaOnly,/added after the meeting/);
+ const posted=page('2026-12-21',[{label:'Meeting minutes',url:'https://example.com/minutes'}]);
+ assert.match(posted,/example.com\/minutes/);assert.doesNotMatch(posted,/minutes will be added/);
+ assert.doesNotMatch(render('#event/season-test','2026-12-15',addSeason).get('fr-detail').innerHTML,/minutes will be added/);
 });
